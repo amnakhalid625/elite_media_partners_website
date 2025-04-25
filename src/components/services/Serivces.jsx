@@ -110,9 +110,9 @@ const Services = () => {
     <section className="py-16 bg-gray-50">
       <div className="text-center mb-12">
         <div className="flex items-center justify-center gap-2">
-          <div className="w-8 h-0.5 bg-red-700"></div>
-          <h2 className="text-3xl font-bold text-[#0d2c40]">Services</h2>
-          <div className="w-8 h-0.5 bg-red-700"></div>
+          <div className="w-8 h-0.5 bg-primary"></div>
+          <h2 className="text-3xl font-bold text-secondary">Services</h2>
+          <div className="w-8 h-0.5 bg-primary"></div>
         </div>
       </div>
 

@@ -29,13 +29,13 @@ const Home = () => {
         }}
         effect="fade"
         modules={[Navigation, Autoplay, EffectFade]}
-        className="mySwiper h-[80vh]" // Changed from h-screen to 80% viewport height
+        className="mySwiper h-[95vh]" 
         speed={1000}
         loop={true}
       >
         <SwiperSlide>
           <div
-            className="h-full w-full bg-cover bg-center relative" // Changed from h-screen to h-full
+            className="h-full w-full bg-cover bg-center relative" 
             style={{ backgroundImage: "url('https://images.pexels.com/photos/7437489/pexels-photo-7437489.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')" }}
           >
             <div className="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center text-center px-4">
@@ -86,7 +86,7 @@ const Home = () => {
           </div>
         </SwiperSlide>
 
-        {/* Enhanced Navigation Buttons */}
+        {/*Navigate Buttons */}
         <div className="swiper-button-prev !left-10 !w-12 !h-12 rounded-full bg-white bg-opacity-20 flex items-center justify-center after:!text-lg after:!text-white hover:bg-opacity-40 shadow-lg backdrop-blur-sm transition-all duration-300 border border-white border-opacity-30 after:content-['prev'] after:font-semibold"></div>
         <div className="swiper-button-next !right-10 !w-12 !h-12 rounded-full bg-white bg-opacity-20 flex items-center justify-center after:!text-lg after:!text-white hover:bg-opacity-40 shadow-lg backdrop-blur-sm transition-all duration-300 border border-white border-opacity-30 after:content-['next'] after:font-semibold"></div>
       </Swiper>

@@ -108,7 +108,7 @@ const Navbar = () => {
       {isOpen && (
         <div className="lg:hidden transition-all duration-300 ease-in-out">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a href="#" className="block px-3 py-2 text-base font-medium text-blue-600 transition-colors duration-200">Home</a>
+            <a href="#" className="block px-3 py-2 text-base font-medium text-primary transition-colors duration-200">Home</a>
             <button 
               onClick={() => toggleDropdown(!isDropdownOpen)}
               className="flex items-center w-full px-3 py-2 text-base font-semibold text-gray-700 transition-colors duration-200"

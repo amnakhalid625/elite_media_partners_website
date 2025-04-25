@@ -14,8 +14,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white border-b shadow-lg">
-      <div className="container mx-auto px-10">
+    <nav className="bg-white border-b shadow-lg fixed w-full top-0 z-50">
+      <div className="container mx-auto px-8">
         <div className="flex items-center justify-between h-24">
           {/* Logo */}
           <a href="#" className="flex items-center">
@@ -96,7 +96,7 @@ const Navbar = () => {
             {/* CTA Button */}
             <button 
               type="button" 
-              className="inline-flex items-center px-4 py-3 border border-transparent rounded-md shadow-sm text-sm font-semibold text-white bg-primary hover:bg-secondary transition-all duration-300 hover:scale-105 transform"
+              className="inline-flex items-center px-4 py-3 border border-transparent rounded-md shadow-sm text-sm font-bold text-white bg-primary hover:bg-secondary transition-all duration-300 hover:scale-105 transform"
             >
               Company Profile
             </button>

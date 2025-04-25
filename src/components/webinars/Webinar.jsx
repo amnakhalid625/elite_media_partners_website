@@ -77,7 +77,7 @@ const Webinar = () => {
   ];
 
   return (
-    <div className="bg-gray-50 py-10 px-4 md:px-8">
+    <div className="bg-[#EFEDEE] py-10 px-4 md:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-8">
         <div className="flex items-center justify-center gap-2">

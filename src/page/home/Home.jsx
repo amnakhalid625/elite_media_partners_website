@@ -42,7 +42,7 @@ const Home = () => {
             <div className="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center text-center px-4">
               <h1 className="text-white text-4xl  md:text-5xl sm:text-4xl sm:mb-4 sm:leading-snug font-bold mb-6">Expert consulting for impactful results.</h1>
               <p className="text-white max-w-2xl mb-6">In a world where change is constant, our consulting services bridge the gap between today's challenges and tomorrow's achievements, so you can act with purpose and precision. Let's redefine what's possible!</p>
-              <a href="#" className="bg-primary hover:bg-blue-700 text-white font-bold py-2 px-8 rounded-md transition duration-300">Learn More</a>
+              <a href="#" className="bg-primary hover:bg-secondary text-white font-bold py-3 px-8 rounded-md transition duration-300">Learn More</a>
             </div>
           </div>
         </SwiperSlide>
@@ -52,7 +52,7 @@ const Home = () => {
             <div className="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center text-center px-4">
               <h1 className="text-white text-4xl md:text-5xl sm:text-4xl sm:mb-4 sm:leading-snug font-bold mb-4">Strategic accounting for seamless growth.</h1>
               <p className="text-white max-w-2xl mb-6">We know numbers tell a story, and we're here to ensure yours is a success. Our Accounting solutions are tailored for seamless financial management. Empowering your business with data-driven insights and ensure every decision counts.</p>
-              <a href="#" className="bg-primary hover:bg-blue-700 text-white font-bold py-2 px-8 rounded-md transition duration-300">Learn More</a>
+              <a href="#" className="bg-primary hover:bg-secondary text-white font-bold py-3 px-8 rounded-md transition duration-300">Learn More</a>
             </div>
           </div>
         </SwiperSlide>
@@ -62,7 +62,7 @@ const Home = () => {
             <div className="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center text-center px-4">
               <h1 className="text-white text-4xl md:text-5xl sm:text-4xl sm:md-4 sm:leading-snug font-bold mb-4">Smarter tax planning, smarter decisions</h1>
               <p className="text-white max-w-2xl mb-6">When it comes to assurance, trust is everything. Our experts bring rigor, insight, and reliability to every engagement, so you can make critical business decisions with unwavering confidence. Redefine trust with athGADLANG.</p>
-              <a href="#" className="bg-primary hover:bg-blue-700 text-white font-bold py-2 px-8 rounded-md transition duration-300">Learn More</a>
+              <a href="#" className="bg-primary hover:bg-secondary text-white font-bold py-3 px-8 rounded-md transition duration-300">Learn More</a>
             </div>
           </div>
         </SwiperSlide>
@@ -72,7 +72,7 @@ const Home = () => {
             <div className="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center text-center px-4">
               <h1 className="text-white text-4xl md:text-5xl sm:text-4xl sm:mb-4  sm:leading-snug font-bold mb-4">Top talent, zero hassle. We got you covered</h1>
               <p className="text-white max-w-2xl mb-6">Empower your team with agile talent solutions that grow with you. Our resourcing services connect you with the expertise you need, exactly when you need it. Let's build a team that drives results.</p>
-              <a href="#" className="bg-primary hover:bg-blue-700 text-white font-bold py-2 px-8 rounded-md transition duration-300">Learn More</a>
+              <a href="#" className="bg-primary hover:bg-secondary text-white font-bold py-3 px-8 rounded-md transition duration-300">Learn More</a>
             </div>
           </div>
         </SwiperSlide>
@@ -82,14 +82,37 @@ const Home = () => {
             <div className="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center text-center px-4">
               <h1 className="text-white text-4xl md:text-5xl font-bold mb-4">Reliable assurance for your business.</h1>
               <p className="text-white max-w-2xl mb-6">When it comes to assurance, trust is everything. Our experts bring rigor, insight, and reliability to every engagement, so you can make critical business decisions with unwavering confidence. Redefine trust with athGADLANG.</p>
-              <a href="#" className="bg-primary hover:bg-blue-700 text-white font-bold py-2 px-8 rounded-md transition duration-300">Learn More</a>
+              <a href="#" className="bg-primary hover:bg-secondary text-white font-bold py-3 px-8 rounded-md transition duration-300">Learn More</a>
             </div>
           </div>
         </SwiperSlide>
 
         {/*Navigate Buttons */}
-        <div className="swiper-button-prev !left-10 !w-12 !h-12 rounded-full bg-white bg-opacity-20 flex items-center justify-center after:!text-lg after:!text-white hover:bg-opacity-40 shadow-lg backdrop-blur-sm transition-all duration-300 border border-white border-opacity-30 after:content-['prev'] after:font-semibold"></div>
-        <div className="swiper-button-next !right-10 !w-12 !h-12 rounded-full bg-white bg-opacity-20 flex items-center justify-center after:!text-lg after:!text-white hover:bg-opacity-40 shadow-lg backdrop-blur-sm transition-all duration-300 border border-white border-opacity-30 after:content-['next'] after:font-semibold"></div>
+        <div className="swiper-button-prev 
+  !left-4 sm:!left-10 
+  !w-10 !h-10 sm:!w-12 sm:!h-12 
+  rounded-full bg-white bg-opacity-20 
+  flex items-center justify-center 
+  after:!text-sm sm:after:!text-lg after:!text-white 
+  hover:bg-opacity-40 shadow-lg backdrop-blur-sm 
+  transition-all duration-300 
+  border border-white border-opacity-30 
+  after:content-['prev'] after:font-semibold">
+</div>
+
+<div className="swiper-button-next 
+  !right-4 sm:!right-10 
+  !w-10 !h-10 sm:!w-12 sm:!h-12 
+  rounded-full bg-white bg-opacity-20 
+  flex items-center justify-center 
+  after:!text-sm sm:after:!text-lg after:!text-white 
+  hover:bg-opacity-40 shadow-lg backdrop-blur-sm 
+  transition-all duration-300 
+  border border-white border-opacity-30 
+  after:content-['next'] after:font-semibold">
+</div>
+
+    
       </Swiper>
     </div>
 

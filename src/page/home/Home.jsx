@@ -11,6 +11,7 @@ import 'swiper/css/autoplay';
 import 'swiper/css/effect-fade';
 import Services from '../../components/services/Serivces'
 import ContentCard from '../../components/contentCard/ContentCard';
+import Webinar from '../../components/webinars/Webinar';
 
 
 const Home = () => {
@@ -94,6 +95,7 @@ const Home = () => {
 
     <Services />
     <ContentCard />
+    <Webinar />
     </>
   );
 };

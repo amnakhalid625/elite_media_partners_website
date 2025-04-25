@@ -10,6 +10,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/autoplay';
 import 'swiper/css/effect-fade';
 import Services from '../../components/services/Serivces'
+import ContentCard from '../../components/contentCard/ContentCard';
 
 
 const Home = () => {
@@ -92,6 +93,7 @@ const Home = () => {
     </div>
 
     <Services />
+    <ContentCard />
     </>
   );
 };

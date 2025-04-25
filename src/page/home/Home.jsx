@@ -9,11 +9,13 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/autoplay';
 import 'swiper/css/effect-fade';
+import Services from '../../components/services/Serivces'
+
 
 const Home = () => {
   return (
     <>
-    <div className="pt-16"> {/* Add padding-top to account for the fixed navbar */}
+    <div className="pt-16"> 
       <Swiper
         direction="horizontal"
         navigation={{
@@ -88,6 +90,8 @@ const Home = () => {
         <div className="swiper-button-next !right-10 !w-12 !h-12 rounded-full bg-white bg-opacity-20 flex items-center justify-center after:!text-lg after:!text-white hover:bg-opacity-40 shadow-lg backdrop-blur-sm transition-all duration-300 border border-white border-opacity-30 after:content-['next'] after:font-semibold"></div>
       </Swiper>
     </div>
+
+    <Services />
     </>
   );
 };

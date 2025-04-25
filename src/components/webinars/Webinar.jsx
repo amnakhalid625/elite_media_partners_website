@@ -8,7 +8,7 @@ const Webinar = () => {
       date: "Tuesday, 10 May",
       time: "10:00 UAE TIME",
       cta: "WATCH NOW",
-      image: "/api/placeholder/400/200",
+      image: "https://images.pexels.com/photos/1595391/pexels-photo-1595391.jpeg?auto=compress&cs=tinysrgb&w=600",
       tag: "WEBINAR | @HGGLANG | 2024"
     },
     {
@@ -17,7 +17,7 @@ const Webinar = () => {
       date: "15 April, 2024",
       time: "11:00 AM",
       cta: "WATCH NOW",
-      image: "/api/placeholder/400/200",
+      image: "https://images.pexels.com/photos/7213361/pexels-photo-7213361.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
       tag: "UAE | Tax | 2024"
     },
     {
@@ -26,7 +26,7 @@ const Webinar = () => {
       date: "17 May, 2024",
       time: "14:00 UAE TIME",
       cta: "WATCH NOW",
-      image: "/api/placeholder/400/200",
+      image: "https://images.pexels.com/photos/4872028/pexels-photo-4872028.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
       tag: "UAE"
     },
     {
@@ -35,7 +35,7 @@ const Webinar = () => {
       date: "20 June, 2023",
       time: "10:30 AM",
       cta: "WATCH NOW",
-      image: "/api/placeholder/400/200",
+      image: "https://images.pexels.com/photos/7983548/pexels-photo-7983548.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
       tag: "2023"
     },
     {
@@ -44,7 +44,7 @@ const Webinar = () => {
       date: "25 March, 2024",
       time: "13:00 UAE TIME",
       cta: "WATCH NOW",
-      image: "/api/placeholder/400/200",
+      image: "https://images.pexels.com/photos/2505056/pexels-photo-2505056.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
       tag: "UAE"
     },
     {
@@ -53,7 +53,7 @@ const Webinar = () => {
       date: "5 May, 2024",
       time: "11:30 AM",
       cta: "WATCH NOW",
-      image: "/api/placeholder/400/200",
+      image: "https://images.pexels.com/photos/29253461/pexels-photo-29253461/free-photo-of-speaker-presenting-on-3d-printing-use-cases.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
       tag: "2024"
     },
     {
@@ -62,7 +62,7 @@ const Webinar = () => {
       date: "12 April, 2024",
       time: "15:00 UAE TIME",
       cta: "WATCH NOW",
-      image: "/api/placeholder/400/200",
+      image: "https://images.pexels.com/photos/8761554/pexels-photo-8761554.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
       tag: "2024"
     },
     {
@@ -71,7 +71,7 @@ const Webinar = () => {
       date: "22 February, 2024",
       time: "10:00 AM",
       cta: "WATCH NOW",
-      image: "/api/placeholder/400/200",
+      image: "https://images.pexels.com/photos/29708254/pexels-photo-29708254/free-photo-of-person-speaking-at-indoor-conference-event.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
       tag: "2024"
     }
   ];
@@ -80,11 +80,11 @@ const Webinar = () => {
     <div className="bg-gray-50 py-10 px-4 md:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold text-gray-800 flex items-center justify-center">
-            <span className="text-red-500 mr-2">—</span>
-            Webinars
-            <span className="text-red-500 ml-2">—</span>
-          </h2>
+        <div className="flex items-center justify-center gap-2">
+          <div className="w-8 h-0.5 bg-primary"></div>
+          <h2 className="text-3xl font-bold text-secondary">Webinars</h2>
+          <div className="w-8 h-0.5 bg-primary"></div>
+        </div>
           <p className="text-gray-600 mt-2">
             Stay updated on the latest market trends with videos from industry leaders.
           </p>

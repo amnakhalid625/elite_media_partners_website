@@ -30,7 +30,7 @@ const Home = () => {
         }}
         effect="fade"
         modules={[Navigation, Autoplay, EffectFade]}
-        className="mySwiper h-[95vh]" 
+        className="mySwiper h-[60vh] md:h-[70vh] lg:h-[95vh]" 
         speed={1000}
         loop={true}
       >

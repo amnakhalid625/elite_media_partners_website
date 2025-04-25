@@ -1,6 +1,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
+import { motion } from "framer-motion";
 import ServicesImg1 from '../../assets/images/serciveCard1.jpg';
 import ServicesImg2 from '../../assets/images/serciveCard2.jpg';
 import ServicesImg3 from '../../assets/images/serciveCard3.jpg';
@@ -73,20 +74,107 @@ const services = [
   }
 ];
 
-const ServiceCard = ({ service }) => (
-  <div className="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-500 relative">
+// Card animations
+const cardVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { 
+    opacity: 1, 
+    y: 0,
+    transition: { 
+      duration: 0.5,
+      ease: "easeOut"
+    }
+  },
+  hover: {
+    y: -10,
+    transition: {
+      duration: 0.3,
+      ease: "easeInOut"
+    }
+  }
+};
+
+const iconVariants = {
+  initial: { x: 0, y: 0, scale: 1 },
+  hover: { 
+    x: "-50%", 
+    y: "-50%", 
+    left: "50%", 
+    top: "50%", 
+    scale: 1.2,
+    transition: {
+      duration: 0.4,
+      ease: "easeInOut"
+    }
+  }
+};
+
+const imageVariants = {
+  initial: { scale: 1, opacity: 1 },
+  hover: { 
+    scale: 1.1, 
+    opacity: 0.3,
+    transition: {
+      duration: 0.4,
+      ease: "easeInOut"
+    }
+  }
+};
+
+const lineVariants = {
+  initial: { width: 0 },
+  hover: { 
+    width: "100%",
+    transition: {
+      duration: 0.4,
+      ease: "easeInOut"
+    }
+  }
+};
+
+const readMoreVariants = {
+  initial: { x: 0 },
+  hover: { 
+    x: 5,
+    transition: {
+      duration: 0.2,
+      ease: "easeInOut",
+      repeat: 0
+    }
+  }
+};
+
+const ServiceCard = ({ service, index }) => (
+  <motion.div 
+    className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-500 relative"
+    variants={cardVariants}
+    initial="hidden"
+    animate="visible"
+    whileHover="hover"
+    transition={{ 
+      delay: index * 0.1 
+    }}
+  >
     <div className="relative overflow-hidden h-48">
       {/* Background image */}
-      <img
+      <motion.img
         src={service.image}
         alt={service.title}
-        className="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 group-hover:opacity-30"
+        className="w-full h-full object-cover"
+        variants={imageVariants}
+        initial="initial"
+        whileHover="hover"
       />
       
       {/* Icon that moves to center on hover */}
-      <div className="absolute left-4 top-4 p-3 bg-white rounded-lg shadow-md transition-all duration-300 group-hover:left-1/2 group-hover:top-1/2 group-hover:-translate-x-1/2 group-hover:-translate-y-1/2 z-10">
+      <motion.div 
+        className="absolute left-4 top-4 p-3 bg-white rounded-lg shadow-md z-10"
+        variants={iconVariants}
+        initial="initial"
+        whileHover="hover"
+      >
         {service.icon}
-      </div>
+      </motion.div>
     </div>
 
     <div className="p-6">
@@ -94,30 +182,96 @@ const ServiceCard = ({ service }) => (
       <p className="text-gray-600 text-sm mb-4">{service.description}</p>
       <a
         href="#"
-        className="text-[#b91c1c] font-semibold flex items-center gap-2 transition-all"
+        className="text-[#b91c1c] font-semibold flex items-center gap-2"
       >
         Read more
-        <span className="transform transition-transform group-hover:translate-x-1">→</span>
+        <motion.span
+          variants={readMoreVariants}
+          initial="initial"
+          whileHover="hover"
+        >
+          →
+        </motion.span>
       </a>
     </div>
 
-    <div className="absolute bottom-0 left-0 w-0 h-[4px] bg-[#b91c1c] group-hover:w-full transition-all duration-500"></div>
-  </div>
+    <motion.div 
+      className="absolute bottom-0 left-0 h-[4px] bg-[#b91c1c]"
+      variants={lineVariants}
+      initial="initial"
+      whileHover="hover"
+    ></motion.div>
+  </motion.div>
 );
+
+// Section animations
+const sectionVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      when: "beforeChildren",
+      staggerChildren: 0.1
+    }
+  }
+};
+
+const titleVariants = {
+  hidden: { opacity: 0, y: -20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut"
+    }
+  }
+};
+
+const lineVariants2 = {
+  hidden: { width: 0 },
+  visible: {
+    width: "2rem",
+    transition: {
+      duration: 0.5,
+      ease: "easeInOut"
+    }
+  }
+};
 
 const Services = () => {
   return (
-    <section className="py-16 bg-gray-50">
+    <motion.section 
+      className="py-16 bg-gray-50"
+      variants={sectionVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.1 }}
+    >
       <div className="text-center mb-12">
         <div className="flex items-center justify-center gap-2">
-          <div className="w-8 h-0.5 bg-primary"></div>
-          <h2 className="text-3xl font-bold text-secondary">Services</h2>
-          <div className="w-8 h-0.5 bg-primary"></div>
+          <motion.div 
+            className="h-0.5 bg-primary"
+            variants={lineVariants2}
+          ></motion.div>
+          <motion.h2 
+            className="text-3xl font-bold text-secondary"
+            variants={titleVariants}
+          >
+            Services
+          </motion.h2>
+          <motion.div 
+            className="h-0.5 bg-primary"
+            variants={lineVariants2}
+          ></motion.div>
         </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4">
-        <div className="services-container relative">
+        <motion.div 
+          className="services-container relative"
+          variants={cardVariants}
+        >
           <Swiper
             slidesPerView={1}
             spaceBetween={20}
@@ -144,13 +298,13 @@ const Services = () => {
           >
             {services.map((service, index) => (
               <SwiperSlide key={index}>
-                <ServiceCard service={service} />
+                <ServiceCard service={service} index={index} />
               </SwiperSlide>
             ))}
           </Swiper>
           
           <div className="swiper-custom-pagination flex justify-center mt-8"></div>
-        </div>
+        </motion.div>
       </div>
       
       {/* Custom CSS for bullets */}
@@ -187,7 +341,7 @@ const Services = () => {
           background: #b91c1c;
         }
       `}</style>
-    </section>
+    </motion.section>
   );
 };
 

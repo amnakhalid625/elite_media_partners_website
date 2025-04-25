@@ -95,7 +95,7 @@ const Webinar = () => {
             <div key={webinar.id} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
               <div className="relative">
                 <img src={webinar.image} alt={webinar.title} className="w-full h-48 object-cover" />
-                <div className="absolute bottom-0 right-0 bg-red-600 text-white px-3 py-1 rounded-tl-md">
+                <div className="absolute bottom-0 right-0 bg-primary text-white px-3 py-1 rounded-tl-md">
                   {webinar.cta}
                 </div>
               </div>
@@ -106,7 +106,7 @@ const Webinar = () => {
                   <div className="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full">
                     {webinar.date}
                   </div>
-                  <button className="bg-blue-50 text-blue-600 text-xs px-3 py-1 rounded-full hover:bg-blue-100 transition-colors">
+                  <button className="bg-primary text-white text-xs px-3 py-1 rounded-full hover:bg-blue-100 transition-colors">
                     WATCH NOW
                   </button>
                 </div>
@@ -116,7 +116,7 @@ const Webinar = () => {
         </div>
         
         <div className="mt-10 text-center">
-          <button className="bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700 transition-colors">
+          <button className="bg-primary text-white font-bold px-6 py-2 rounded hover:bg-red-700 transition-colors">
             View More
           </button>
         </div>

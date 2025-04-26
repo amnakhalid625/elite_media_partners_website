@@ -22,38 +22,47 @@ const services = [
     title: "Accounting & Bookkeeping",
     description: "Managing financial transactions for a clear view of your business’s health.", 
     image: ServicesImg1,
-    icon: <FaUsers className="text-red-700 text-2xl" />
+    icon: <FaUsers className="text-red-700 text-2xl" />,
+    link: '/accounting'
   },
   {
     title: "Fundraising Support",
     description: "Helping businesses secure the right funding through strategic planning, investor engagement, and expert guidance.",
     image: ServicesImg2,
-    icon: <FaCalculator className="text-red-700 text-2xl" />
+    icon: <FaCalculator className="text-red-700 text-2xl" />,
+    link: '/fundraising'
   },
   {
     title: "Financial Planning and Analysis",
     description: "Using budgeting, forecasting, and analysis to drive smarter financial decisions and growth.",
     image: ServicesImg3,
-    icon: <FaChartLine className="text-red-700 text-2xl" />
+    icon: <FaChartLine className="text-red-700 text-2xl" />,
+    link: '/planning'
   },
   {
     title: "Financial & Strategic Advisory",
     description: "Offering expert guidance to optimize performance, maximize value, and fuel business growth.",
     image: ServicesImg4,
-    icon: <FaShieldAlt className="text-red-700 text-2xl" />
+    icon: <FaShieldAlt className="text-red-700 text-2xl" />,
+    link: '/strategy'
   },
   {
     title: "Risk Advisory",
     description: "Identifying, assessing, and managing risks to protect business value and ensure sustainable growth.",
     image: ServicesImg5,
-    icon: <FaCheckCircle className="text-red-700 text-2xl" />
+    icon: <FaCheckCircle className="text-red-700 text-2xl" />,
+    link: '/riskAdvisory'
+
   },
  
   {
     title: "Consulting",
     description: "Offering expert advice and solutions to help businesses overcome challenges and achieve their strategic objectives.",
     image: ServicesImg6,
-    icon: <FaComments className="text-red-700 text-2xl" />
+    icon: <FaComments className="text-red-700 text-2xl" />,
+    link: '/consult'
+
+
   },
  
 ];

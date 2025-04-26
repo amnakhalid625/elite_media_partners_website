@@ -8,7 +8,6 @@ import Fundrasing from './page/Fundrasing'
 import RiskAdvisory from './page/RiskAdvisor'
 import Planning from './page/Planning'
 
-
 function App() {
 
   return (

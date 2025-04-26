@@ -17,28 +17,28 @@ import { motion } from 'framer-motion';
 const slides = [
   {
     bg: "https://images.pexels.com/photos/7437489/pexels-photo-7437489.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    title: "Expert consulting for impactful results.",
-    desc: "In a world where change is constant, our consulting services bridge the gap between today's challenges and tomorrow's achievements.",
+    title: "Transforming Financial Strategy",
+    desc: "Elite Partners redefines how businesses manage finance with a commitment to precision, transparency, and strategic growth.",
   },
   {
     bg: two,
-    title: "Strategic accounting for seamless growth.",
-    desc: "Our Accounting solutions are tailored for seamless financial management and data-driven insights.",
+    title: "Complete Financial Solutions",
+    desc: "Offering Accounting, Financial Advisory, Fundraising, and Mergers & Acquisitions services tailored for today’s evolving business needs.",
   },
   {
     bg: three,
-    title: "Smarter tax planning, smarter decisions.",
-    desc: "Our experts bring rigor, insight, and reliability to every engagement. Redefine trust with athGADLANG.",
+    title: "Global Standards  and Trusted Frameworks",
+    desc: "We anchor our solutions in international standards like IFRS and GAAP, using industry-leading methodologies to ensure compliance and excellence.",
   },
   {
     bg: four,
-    title: "Top talent, zero hassle. We got you covered.",
-    desc: "Agile talent solutions that grow with you. Let’s build a team that drives results.",
+    title: " Technology-Driven Growth",
+    desc: "Combine cloud-based tools with expert insights.Focus on building a strong financial foundation and supporting data-driven decisions.",
   },
   {
     bg: five,
-    title: "Reliable assurance for your business.",
-    desc: "Make critical business decisions with unwavering confidence. Redefine trust with athGADLANG.",
+    title: "Unlocking Value and Accelerating Growth",
+    desc: "By leveraging cloud-based tools and seasoned expertise, we build strong financial foundations that enable data-driven decisions.",
   },
 ];
 

@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
 import { motion } from "framer-motion";
@@ -163,8 +164,8 @@ const ServiceCard = ({ service, index }) => (
     <div className="p-6">
       <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>
       <p className="text-gray-600 text-sm mb-4">{service.description}</p>
-      <a
-        href="#"
+      <Link
+        to="#"
         className="text-[#b91c1c] font-semibold flex items-center gap-2"
       >
         Read more
@@ -175,7 +176,7 @@ const ServiceCard = ({ service, index }) => (
         >
           →
         </motion.span>
-      </a>
+      </Link>
     </div>
 
     <motion.div 

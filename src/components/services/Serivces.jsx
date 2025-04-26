@@ -8,70 +8,53 @@ import ServicesImg3 from '../../assets/images/serciveCard3.jpg';
 import ServicesImg4 from '../../assets/images/serciveCard4.jpg';
 import ServicesImg5 from '../../assets/images/serciveCard5.jpg';
 import ServicesImg6 from '../../assets/images/serciveCard6.jpg';
-import ServicesImg7 from '../../assets/images/serciveCard7.jpg';
-import ServicesImg8 from '../../assets/images/serciveCard8.jpg';
+
 
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 
-import { FaUsers, FaCalculator, FaChartLine, FaShieldAlt, FaCheckCircle, FaTools, FaComments, FaGlobe } from 'react-icons/fa';
+import { FaUsers, FaCalculator, FaChartLine, FaShieldAlt, FaCheckCircle, FaComments } from 'react-icons/fa';
 
 const services = [
   {
-    title: "Resourcing",
-    description: "Expert-driven staffing ensures the right talent at the right time efficiently, boosting productivity & success.",
+    title: "Accounting & Bookkeeping",
+    description: "Managing financial transactions for a clear view of your business’s health.", 
     image: ServicesImg1,
     icon: <FaUsers className="text-red-700 text-2xl" />
   },
   {
-    title: "Tax",
-    description: "Integrated tax solutions optimize liabilities, ensure compliance, and support global expansion.",
+    title: "Fundraising Support",
+    description: "Helping businesses secure the right funding through strategic planning, investor engagement, and expert guidance.",
     image: ServicesImg2,
     icon: <FaCalculator className="text-red-700 text-2xl" />
   },
   {
-    title: "Accounting",
-    description: "Precise financial records enabling informed decisions and efficient business operations.",
+    title: "Financial Planning and Analysis",
+    description: "Using budgeting, forecasting, and analysis to drive smarter financial decisions and growth.",
     image: ServicesImg3,
     icon: <FaChartLine className="text-red-700 text-2xl" />
   },
   {
-    title: "Assurance",
-    description: "Unbiased financial assessment to help organizations tackle global challenges with confidence.",
+    title: "Financial & Strategic Advisory",
+    description: "Offering expert guidance to optimize performance, maximize value, and fuel business growth.",
     image: ServicesImg4,
     icon: <FaShieldAlt className="text-red-700 text-2xl" />
   },
   {
     title: "Risk Advisory",
-    description: "Unbiased financial assessment to help organizations tackle global challenges with confidence.",
+    description: "Identifying, assessing, and managing risks to protect business value and ensure sustainable growth.",
     image: ServicesImg5,
     icon: <FaCheckCircle className="text-red-700 text-2xl" />
   },
-  {
-    title: "Advisory",
-    description: "Unbiased financial assessment to help organizations tackle global challenges with confidence.",
-    image: ServicesImg4,
-    icon: <FaTools className="text-red-700 text-2xl" />
-  },
+ 
   {
     title: "Consulting",
-    description: "Unbiased financial assessment to help organizations tackle global challenges with confidence.",
+    description: "Offering expert advice and solutions to help businesses overcome challenges and achieve their strategic objectives.",
     image: ServicesImg6,
     icon: <FaComments className="text-red-700 text-2xl" />
   },
-  {
-    title: "Global Services",
-    description: "Unbiased financial assessment to help organizations tackle global challenges with confidence.",
-    image: ServicesImg7,
-    icon: <FaGlobe className="text-red-700 text-2xl" />
-  },
-  {
-    title: "Business Strategy",
-    description: "Unbiased financial assessment to help organizations tackle global challenges with confidence.",
-    image: ServicesImg8,
-    icon: <FaChartLine className="text-red-700 text-2xl" />
-  }
+ 
 ];
 
 // Card animations

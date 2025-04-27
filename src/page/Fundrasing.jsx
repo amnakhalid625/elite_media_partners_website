@@ -6,7 +6,7 @@ const Fundraising = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-indigo-700 to-indigo-900 text-white">
+      <section className="py-20 bg-primary text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -44,7 +44,7 @@ const Fundraising = () => {
               <p className="text-gray-600 mb-8 text-lg leading-relaxed">
                 We ensure your financials are airtight and investor-ready — setting the foundation for a successful fundraising journey.
               </p>
-              <button className="bg-indigo-700 hover:bg-indigo-800 text-white px-6 py-3 rounded-lg transition duration-300">
+              <button className="bg-primary hover:bg-secondary text-white px-6 py-3 rounded-lg transition duration-300">
                 Get Started with Fundraising
               </button>
             </motion.div>
@@ -57,12 +57,12 @@ const Fundraising = () => {
               className="bg-white p-8 rounded-xl shadow-lg"
             >
               <img 
-                src="https://images.unsplash.com/photo-1612178994534-06c5164906ff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
-                alt="Fundraising Strategy" 
+                src="https://media.istockphoto.com/id/1429274633/photo/businessmen-verify-the-accuracy-of-paperwork-business-reviews-are-essential-search-for.jpg?s=2048x2048&w=is&k=20&c=tla5tUuyJSXWy6fZzDTErI18JlW9G4YX_UFqgfXg3Ug=" 
+                alt="Fundraising Process Flow" 
                 className="rounded-lg w-full h-auto"
               />
               <div className="mt-6 text-center text-gray-600">
-                Transform your fundraising story into a powerful, investor-magnet strategy
+                Our comprehensive fundraising approach maximizes your success potential
               </div>
             </motion.div>
           </div>
@@ -73,40 +73,40 @@ const Fundraising = () => {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center text-gray-800 mb-16">
-            What Makes Our Fundraising Strategy Unique
+            Comprehensive Fundraising Solutions
           </h2>
           
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                icon: <FiDollarSign className="w-8 h-8 text-indigo-700" />,
+                icon: <FiDollarSign className="w-8 h-8 bg-primary" />,
                 title: "Investor Deck Creation",
                 description: "Visually stunning and insight-rich presentations that clearly communicate your investment potential"
               },
               {
-                icon: <FiBarChart2 className="w-8 h-8 text-indigo-700" />,
+                icon: <FiBarChart2 className="w-8 h-8 bg-primary" />,
                 title: "Financial Modeling",
                 description: "Detailed, dynamic models that validate your projections and withstand investor scrutiny"
               },
               {
-                icon: <FiClipboard className="w-8 h-8 text-indigo-700" />,
+                icon: <FiClipboard className="w-8 h-8 bg-primary" />,
                 title: "Due Diligence Readiness",
                 description: "Full preparation of operational, legal, and financial documentation for investor review"
               },
               {
-                icon: <FiMic className="w-8 h-8 text-indigo-700" />,
+                icon: <FiMic className="w-8 h-8 bg-primary" />,
                 title: "Pitch Coaching",
                 description: "Expert coaching sessions to refine your pitch and deliver with clarity and impact"
               },
               {
-                icon: <FiSearch className="w-8 h-8 text-indigo-700" />,
+                icon: <FiSearch className="w-8 h-8 bg-primary" />,
                 title: "Market Opportunity Analysis",
                 description: "Data-backed analysis highlighting market size, trends, and positioning"
               },
               {
-                icon: <FiUsers className="w-8 h-8 text-indigo-700" />,
-                title: "Ongoing Advisory Support",
-                description: "Strategic guidance post-funding to manage new stakeholder expectations"
+                icon: <FiUsers className="w-8 h-8 bg-primary" />,
+                title: "Investor Relations",
+                description: "Ongoing strategic guidance to manage investor expectations and communications"
               }
             ].map((feature, index) => (
               <motion.div
@@ -131,14 +131,14 @@ const Fundraising = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-indigo-700 text-white">
+      <section className="py-20 bg-primary text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-6">Let's Build Your Investment Story</h2>
+          <h2 className="text-3xl font-bold mb-6">Ready to Elevate Your Fundraising?</h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Partner with experts who understand what investors need to see, and let's secure your next round of funding with confidence.
+            Let our experts craft your investment story and prepare all the materials you need for a successful raise
           </p>
-          <button className="bg-white text-indigo-700 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition duration-300">
-            Schedule a Strategy Call
+          <button className="bg-white text-primary hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition duration-300">
+            Schedule a Consultation
           </button>
         </div>
       </section>

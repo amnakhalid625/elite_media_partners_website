@@ -16,6 +16,7 @@ import "swiper/css/pagination";
 import "swiper/css/autoplay";
 
 import { FaUsers, FaCalculator, FaChartLine, FaShieldAlt, FaCheckCircle, FaComments } from "react-icons/fa";
+import WhatsAppButton from "../whatsapp/WhatsAppButton";
 
 const services = [
   {
@@ -168,6 +169,7 @@ const ServiceCard = ({ service, index }) => (
 
 const Services = () => {
   return (
+    <>
     <motion.section
     id="services"
       className="py-16 bg-background"
@@ -239,6 +241,9 @@ const Services = () => {
         }
       `}</style>
     </motion.section>
+
+    <WhatsAppButton />
+    </>
   );
 };
 

@@ -174,7 +174,7 @@ const ServiceCard = ({ service, index }) => (
       <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>
       <p className="text-gray-600 text-sm mb-4">{service.description}</p>
       <Link
-        to="#"
+        to={service.link}
         className="text-[#b91c1c] font-semibold flex items-center gap-2"
       >
         Read more

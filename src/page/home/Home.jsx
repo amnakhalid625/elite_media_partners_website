@@ -1,7 +1,8 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay, EffectFade } from 'swiper/modules';
-import two from '../../assets/images/s1.webp';
+import one from '../../assets/images/slide1.png'
+import two from '../../assets/images/slide2.jpg';
 import three from '../../assets/images/s2.webp';
 import four from '../../assets/images/s4.webp';
 import five from '../../assets/images/s5.webp';
@@ -11,12 +12,11 @@ import 'swiper/css/autoplay';
 import 'swiper/css/effect-fade';
 import Services from '../../components/services/Serivces';
 import ContentCard from '../../components/contentCard/ContentCard';
-import Webinar from '../../components/webinars/Webinar';
 import { motion } from 'framer-motion';
 
 const slides = [
   {
-    bg: "https://images.pexels.com/photos/7437489/pexels-photo-7437489.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    bg:one,
     title: "Transforming Financial Strategy",
     desc: "Elite Partners redefines how businesses manage finance with a commitment to precision, transparency, and strategic growth.",
   },
@@ -128,7 +128,6 @@ const Home = () => {
 
       <Services />
       <ContentCard />
-      <Webinar />
     </>
   );
 };

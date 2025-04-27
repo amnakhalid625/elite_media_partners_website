@@ -74,8 +74,10 @@ const Navbar = () => {
               </div>
             </div> */}
             
-            <a href="#" className="text-gray-700 hover:border-b-4 hover:border-primary transition-all duration-300 hover:scale-105">Insight</a>
+            {/* <a href="#" className="text-gray-700 hover:border-b-4 hover:border-primary transition-all duration-300 hover:scale-105">Insight</a> */}
             <a href="#" className="text-gray-700 hover:border-b-4 hover:border-primary transition-all duration-300 hover:scale-105">About Us</a>
+            <a href="#" className="text-gray-700 hover:border-b-4 hover:border-primary transition-all duration-300 hover:scale-105">Services</a>
+
             <a href="#" className="text-gray-700 hover:border-b-4 hover:border-primary transition-all duration-300 hover:scale-105">Contact Us</a>
             
             {/* Search Box */}
@@ -134,8 +136,10 @@ const Navbar = () => {
               </div>
             )} */}
             
-            <a href="#" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200">Insight</a>
+            {/* <a href="#" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200">Insight</a> */}
             <a href="#" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200">About Us</a>
+            <a href="#" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200">Services</a>
+
             <a href="#" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200">Contact Us</a>
             
             {/* <div className="px-3 py-2">

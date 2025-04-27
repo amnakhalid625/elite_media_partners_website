@@ -14,8 +14,8 @@ export default {
         xlarge: "1536px",
       },
       colors: {
-      primary: "#A71F25",
-      secondary: "#133557",
+      primary: "#00555A",
+      secondary: "#BBA04E",
       accent: "#FF5722",
       background: "#F5F5F5",
       text: "#333333",

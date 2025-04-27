@@ -8,7 +8,7 @@ const Planning = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-700 to-blue-900 text-white">
+      <section className="py-20 bg-primary text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -43,7 +43,7 @@ const Planning = () => {
               <p className="text-gray-600 mb-6 text-lg leading-relaxed">
                 Our FP&A services help you anticipate challenges and seize growth prospects. With clear visibility into cash flow and key financial drivers, your leadership team can plan for the future with confidence and agility.
               </p>
-              <button className="bg-blue-700 hover:bg-blue-800 text-white px-6 py-3 rounded-lg transition duration-300">
+              <button className="bg-primary hover:bg-secondary text-white px-6 py-3 rounded-lg transition duration-300">
                 Get Financial Insights
               </button>
             </motion.div>
@@ -87,32 +87,32 @@ const Planning = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                icon: <FiDollarSign className="w-8 h-8 text-blue-700" />,
+                icon: <FiDollarSign className="w-8 h-8 text-primary" />,
                 title: "Budgeting & Forecasting",
                 description: "Develop realistic annual budgets and rolling forecasts, adjusting quickly to changing conditions and priorities."
               },
               {
-                icon: <FiTrendingUp className="w-8 h-8 text-blue-700" />,
+                icon: <FiTrendingUp className="w-8 h-8 text-primary" />,
                 title: "Performance Reporting",
                 description: "Create customized dashboards and reports to monitor KPIs and financial performance against targets."
               },
               {
-                icon: <FiPieChart className="w-8 h-8 text-blue-700" />,
+                icon: <FiPieChart className="w-8 h-8 text-primary" />,
                 title: "Scenario Planning",
                 description: "Evaluate various scenarios (best case, worst case) and craft strategic plans to optimize outcomes."
               },
               {
-                icon: <FiBarChart2 className="w-8 h-8 text-blue-700" />,
+                icon: <FiBarChart2 className="w-8 h-8 text-primary" />,
                 title: "Strategic Planning",
                 description: "Align financial planning with long-term business objectives and growth strategies."
               },
               {
-                icon: <FiCalendar className="w-8 h-8 text-blue-700" />,
+                icon: <FiCalendar className="w-8 h-8 text-primary" />,
                 title: "Cash Flow Management",
                 description: "Monitor working capital and cash flow projections to ensure sufficient funds for operations and growth."
               },
               {
-                icon: <FiTarget className="w-8 h-8 text-blue-700" />,
+                icon: <FiTarget className="w-8 h-8 text-primary" />,
                 title: "KPI Analysis",
                 description: "Identify and track key performance indicators that drive your business success."
               }
@@ -139,13 +139,13 @@ const Planning = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-blue-700 text-white">
+      <section className="py-20 bg-primary text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-6">Ready for Data-Driven Financial Planning?</h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
             Transform your financial data into actionable insights that drive business growth
           </p>
-          <button className="bg-white text-blue-700 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition duration-300">
+          <button className="bg-white text-primary hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition duration-300">
             Get Your Financial Plan
           </button>
         </div>

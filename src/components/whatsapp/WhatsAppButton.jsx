@@ -8,7 +8,7 @@ const WhatsAppButton = () => {
         {/* Pulse Animation */}
         <span className="absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75 group-hover:animate-ping"></span>
 
-        {/* Actual WhatsApp Button */}
+        {/*  WhatsApp Button */}
         <a 
           href="https://wa.me/923001234567" 
           target="_blank" 

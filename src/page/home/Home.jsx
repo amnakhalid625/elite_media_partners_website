@@ -13,6 +13,7 @@ import 'swiper/css/effect-fade';
 import Services from '../../components/services/Serivces';
 import ContentCard from '../../components/contentCard/ContentCard';
 import TeamMembers from '../../components/team/TeamMembers';
+import Testimonial from '../../components/testimonial/Testimonial';
 import { motion } from 'framer-motion';
 
 const slides = [
@@ -130,6 +131,7 @@ const Home = () => {
       <Services />
       <ContentCard />
       <TeamMembers />
+      <Testimonial />
     </>
   );
 };

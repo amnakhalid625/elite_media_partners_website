@@ -42,7 +42,7 @@ const Testimonial = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="mb-8">
         <div className="flex items-center justify-center gap-2">
@@ -87,7 +87,7 @@ const Testimonial = () => {
                   transition={{ duration: 0.5 }}
                   viewport={{ once: true }}
                   whileHover={{ y: -5 }}
-                  className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 h-full"
+                  className="bg-background p-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 h-full"
                 >
                  
                   

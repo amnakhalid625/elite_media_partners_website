@@ -14,6 +14,7 @@ import Services from '../../components/services/Serivces';
 import ContentCard from '../../components/contentCard/ContentCard';
 import TeamMembers from '../../components/team/TeamMembers';
 import Testimonial from '../../components/testimonial/Testimonial';
+import Footer from '../../components/footer/Footer';
 import { motion } from 'framer-motion';
 
 const slides = [
@@ -132,6 +133,7 @@ const Home = () => {
       <ContentCard />
       <TeamMembers />
       <Testimonial />
+      <Footer />
     </>
   );
 };

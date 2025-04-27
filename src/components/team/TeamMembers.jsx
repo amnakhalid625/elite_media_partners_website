@@ -2,10 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FiArrowRight } from 'react-icons/fi';
 
-// Animation variants for lines and title
 const lineVariants2 = {
   hidden: { width: 0 },
-  visible: { width: "80px" }, // smoother width
+  visible: { width: "80px" }, 
 };
 
 const titleVariants = {
@@ -38,21 +37,20 @@ const TeamMembers = () => {
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Heading with animated lines */}
         <div className="mb-8">
         <div className="flex items-center justify-center gap-2">
           <div className="w-8 h-0.5 bg-primary"></div>
           <h2 className="text-3xl font-bold text-secondary">Our Team</h2>
           <div className="w-8 h-0.5 bg-primary"></div>
         </div>
-        <p className="text-gray-600 text-center mt-2">We are a team of dedicated professionals who are passionate about what we do.</p>
+        <p className="text-secondaryText text-center mt-2">We are a team of dedicated professionals who are passionate about what we do.</p>
       </div>
 
 
-        {/* Cards Grid */}
+        {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {team.map((member, index) => (
             <motion.div
@@ -72,7 +70,7 @@ const TeamMembers = () => {
                 />
               </div>
               <div className="p-6 text-center">
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">{member.name}</h3>
+                <h3 className="text-xl font-semibold text-secondaryText mb-2">{member.name}</h3>
                 <p className="text-gray-600 mb-4">{member.position}</p>
                 <button className="flex items-center justify-center mx-auto text-primary font-semibold hover:text-primary-dark transition-colors">
                   View Profile

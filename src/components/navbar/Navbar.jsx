@@ -77,9 +77,9 @@ const Navbar = () => {
             
             {/* <a href="#" className="text-gray-700 hover:border-b-4 hover:border-primary transition-all duration-300 hover:scale-105">Insight</a> */}
             <Link to="/about" className="text-gray-700 hover:border-b-4 hover:border-primary transition-all duration-300 hover:scale-105">About Us</Link>
-            <a href="#" className="text-gray-700 hover:border-b-4 hover:border-primary transition-all duration-300 hover:scale-105">Services</a>
+            <a href="#services" className="text-gray-700 hover:border-b-4 hover:border-primary transition-all duration-300 hover:scale-105">Services</a>
 
-            <a href="#" className="text-gray-700 hover:border-b-4 hover:border-primary transition-all duration-300 hover:scale-105">Contact Us</a>
+            <Link to="/contact"  className="text-gray-700 hover:border-b-4 hover:border-primary transition-all duration-300 hover:scale-105">Contact Us</Link>
             
             {/* Search Box */}
             {/* <div className="relative flex items-center">
@@ -139,9 +139,9 @@ const Navbar = () => {
             
             {/* <a href="#" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200">Insight</a> */}
             <Link to="/about" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200">About Us</Link>
-            <a href="#" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200">Services</a>
+            <a href="#services" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200">Services</a>
 
-            <a href="#" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200">Contact Us</a>
+            <Link to="/contact"  className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200">Contact Us</Link>
             
             {/* <div className="px-3 py-2">
               <div className="flex items-center px-3 py-2 border-2 border-gray-300 rounded-md transition-colors duration-200 focus-within:border-primary">

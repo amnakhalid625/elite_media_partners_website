@@ -169,6 +169,7 @@ const ServiceCard = ({ service, index }) => (
 const Services = () => {
   return (
     <motion.section
+    id="services"
       className="py-16 bg-background"
       variants={sectionVariants}
       initial="hidden"

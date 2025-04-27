@@ -66,7 +66,6 @@ const ContentCard = () => {
 
   const handleViewMore = () => {
     console.log("Navigating to next page");
-    // Add your navigation logic here
   };
 
   return (
@@ -81,7 +80,7 @@ const ContentCard = () => {
         <p className="text-gray-600 text-center mt-2">Explore fresh perspectives and expert analysis.</p>
       </div>
 
-      {/* Cards Grid - Added mx-auto to center the grid */}
+      {/* Cards  */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mx-auto">
         {cardData.map((card) => (
           <div 
@@ -102,7 +101,7 @@ const ContentCard = () => {
                 <FiArrowRight className="text-white text-2xl animate-pulse" />
               </div>
             </div>
-            <h3 className="text-lg font-semibold text-gray-800 mb-2">{card.title}</h3>
+            <h3 className="text-lg font-semibold text-secondaryText mb-2">{card.title}</h3>
             {card.description && <p className="text-gray-600 text-sm mb-2">{card.description}</p>}
             {card.subtitle && <p className="font-medium text-gray-700">{card.subtitle}</p>}
             {card.specs && (

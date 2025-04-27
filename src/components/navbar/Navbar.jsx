@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import logoImg from '../../assets/images/finalLogo.png';
 import {Link} from 'react-router-dom'
+import CompanyProfile from '../../pdf/puzzles.pdf'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -75,7 +76,6 @@ const Navbar = () => {
               </div>
             </div> */}
             
-            {/* <a href="#" className="text-gray-700 hover:border-b-4 hover:border-primary transition-all duration-300 hover:scale-105">Insight</a> */}
             <Link to="/about" className="text-gray-700 hover:border-b-4 hover:border-primary transition-all duration-300 hover:scale-105">About Us</Link>
             <a href="#services" className="text-gray-700 hover:border-b-4 hover:border-primary transition-all duration-300 hover:scale-105">Services</a>
 
@@ -96,12 +96,18 @@ const Navbar = () => {
             </div> */}
             
             {/* CTA Button */}
-            <button 
-              type="button" 
-              className="inline-flex items-center px-4 py-3 border border-transparent rounded-md shadow-sm text-sm font-bold text-white bg-primary hover:bg-secondary transition-all duration-300 hover:scale-105 transform"
-            >
-              Company Profile
-            </button>
+            <a 
+  href={CompanyProfile} 
+  download="CompanyProfile.pdf"
+>
+  <button 
+    type="button" 
+    className="inline-flex items-center px-4 py-3 border border-transparent rounded-md shadow-sm text-sm font-bold text-white bg-primary hover:bg-secondary transition-all duration-300 hover:scale-105 transform"
+  >
+    Company Profile
+  </button>
+</a>
+
           </div>
         </div>
       </div>
@@ -157,12 +163,18 @@ const Navbar = () => {
             </div> */}
             
             <div className="px-3 py-2">
-              <button 
-                type="button" 
-                className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary hover:bg-secondary transition-colors duration-200"
-              >
-                Company Profile
-              </button>
+            <a 
+  href={CompanyProfile} 
+  download="CompanyProfile.pdf"
+>
+  <button 
+    type="button" 
+    className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary hover:bg-secondary transition-colors duration-200"
+  >
+    Company Profile
+  </button>
+</a>
+
             </div>
           </div>
         </div>

@@ -15,7 +15,7 @@ const ContactUs = () => {
           <h1 className="text-4xl md:text-5xl font-bold text-primary mb-4">
             Contact Us
           </h1>
-          <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+          <p className="text-secondaryText max-w-2xl mx-auto text-lg">
             We’d love to hear from you! Whether you have a question or just want to say hello, feel free to reach out.
           </p>
         </motion.div>
@@ -25,7 +25,7 @@ const ContactUs = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="bg-white rounded-2xl shadow-lg p-8 md:p-12 space-y-6"
+          className="bg-white rounded-2xl shadow-lg p-8 md:p-12 space-y-4"
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
@@ -60,7 +60,7 @@ const ContactUs = () => {
 
           <button 
             type="submit"
-            className="bg-primary text-white font-semibold py-3 px-8 rounded-lg hover:bg-primary-dark transition duration-300"
+            className="bg-primary text-white font-semibold py-3 px-8 rounded-lg hover:bg-secondary transition duration-300"
           >
             Send Message
           </button>

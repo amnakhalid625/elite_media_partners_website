@@ -18,44 +18,27 @@ const Testimonial = () => {
       quote: "Their risk assessment services saved our company from potential compliance issues. Truly professional and thorough in their approach.",
       name: "Michael Chen",
       position: "CFO, Global Ventures",
-      rating: 5,
-      image: "/images/testimonials/client2.jpg"
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRo5wEk9NDXVRY9kYNehvBq9gAAReTy5HuBTQ&s'
     },
     {
       quote: "The fundraising support was game-changing for our startup. We secured $5M in funding thanks to their strategic guidance.",
       name: "Emma Rodriguez",
       position: "Founder, GreenInnovate",
-      rating: 4,
-      image: "/images/testimonials/client3.jpg"
+      image: 'https://media.istockphoto.com/id/806760428/photo/happy-latin-american-businesswoman-in-office.jpg?s=612x612&w=0&k=20&c=ydJQoIQHJlt3sv0GCAeq1exnYZ2PkkiIOd_67dbYdyk='
     },
     {
       quote: "Their accounting services brought clarity to our financials and helped us make better business decisions. Highly recommended!",
       name: "David Wilson",
       position: "Director, Wilson & Co.",
-      rating: 5,
-      image: "/images/testimonials/client4.jpg"
+      image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmVzc2lvbmFsJTIwbWFufGVufDB8fDB8fHww'
     },
     {
       quote: "The strategic advisory transformed our business model and doubled our valuation in 18 months.",
       name: "Lisa Park",
       position: "Managing Partner, Horizon Group",
-      rating: 5,
-      image: "/images/testimonials/client5.jpg"
+      image: 'https://media.istockphoto.com/id/868502600/photo/woman-sitting-in-cafe.jpg?s=612x612&w=0&k=20&c=cqR-W16X8Z21JE_X1TARv2qMYRoMGK7pNc1mZAOiY8o='
     },
-    {
-        quote: "The strategic advisory transformed our business model and doubled our valuation in 18 months.",
-        name: "Lisa Park",
-        position: "Managing Partner, Horizon Group",
-        rating: 5,
-        image: "/images/testimonials/client5.jpg"
-      },
-      {
-        quote: "The strategic advisory transformed our business model and doubled our valuation in 18 months.",
-        name: "Lisa Park",
-        position: "Managing Partner, Horizon Group",
-        rating: 5,
-        image: "/images/testimonials/client5.jpg"
-      }
+   
   ];
 
   return (

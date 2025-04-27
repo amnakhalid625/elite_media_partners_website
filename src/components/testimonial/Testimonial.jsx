@@ -44,19 +44,14 @@ const Testimonial = () => {
   return (
     <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
-          <div className="w-20 h-1 bg-teal-600 mx-auto"></div>
-          <p className="text-gray-600 mt-6 max-w-2xl mx-auto">
-            Hear from businesses that have transformed their financial operations with our services
-          </p>
-        </motion.div>
+      <div className="mb-8">
+        <div className="flex items-center justify-center gap-2">
+          <div className="w-8 h-0.5 bg-primary"></div>
+          <h2 className="text-3xl font-bold text-secondary">Testimonials</h2>
+          <div className="w-8 h-0.5 bg-primary"></div>
+        </div>
+        <p className="text-gray-600 text-center mt-2">What our clients have to say.</p>
+      </div>
 
         <div className="relative">
           <Swiper

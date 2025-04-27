@@ -175,14 +175,13 @@ const Services = () => {
       whileInView="visible"
       viewport={{ once: true, amount: 0.1 }}
     >
-      <div className="text-center mb-12">
+     <div className="mb-8">
         <div className="flex items-center justify-center gap-2">
-          <motion.div className="h-0.5 bg-primary" variants={lineVariants2}></motion.div>
-          <motion.h2 className="text-3xl font-bold text-secondary" variants={titleVariants}>
-            Services
-          </motion.h2>
-          <motion.div className="h-0.5 bg-primary" variants={lineVariants2}></motion.div>
+          <div className="w-8 h-0.5 bg-primary"></div>
+          <h2 className="text-3xl font-bold text-secondary">Services</h2>
+          <div className="w-8 h-0.5 bg-primary"></div>
         </div>
+        <p className="text-gray-600 text-center mt-2">We offer a wide range of services to help your business succeed.</p>
       </div>
 
       <div className="max-w-7xl mx-auto px-4">

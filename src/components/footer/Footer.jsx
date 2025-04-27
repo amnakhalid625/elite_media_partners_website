@@ -1,9 +1,22 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaLinkedin, FaTwitter, FaFacebook, FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from 'react-icons/fa';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
+
+
 
 const Footer = () => {
+
+  const handleScrollToServices = () => {
+    const servicesSection = document.getElementById("services");
+    if (servicesSection) {
+      servicesSection.scrollIntoView({ behavior: "smooth" });
+      navigate("#services", { replace: true });
+    }
+  };
+
+
   return (
     <footer className="bg-secondary text-white pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -41,11 +54,13 @@ const Footer = () => {
           >
             <h4 className="text-lg font-semibold mb-6 text-secondaryText">Quick Links</h4>
             <ul className="space-y-3">
-              <li><a href="#" className="text-secondaryText  transition-colors">Home</a></li>
-              <li><a href="#" className="text-secondaryText  transition-colors">About Us</a></li>
-              <li><a href="#" className="text-secondaryText  transition-colors">Services</a></li>
-              <li><a href="#" className="text-secondaryText  transition-colors">Case Studies</a></li>
-              <li><a href="#" className="text-secondaryText  transition-colors">Contact</a></li>
+              <li><Link to="/" className="text-secondaryText  transition-colors">Home</Link></li>
+              <li><Link to="/about" className="text-secondaryText  transition-colors">About Us</Link></li>
+              <li><Link to="#services"
+                onClick={handleScrollToServices}
+
+                className="text-secondaryText  transition-colors">Services</Link></li>
+              <li><Link to='/contact' className="text-secondaryText  transition-colors">Contact</Link></li>
             </ul>
           </motion.div>
 
@@ -59,10 +74,10 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-6 text-secondaryText">Our Services</h4>
             <ul className="space-y-3">
               <li><Link to="/accounting" className="text-secondaryText  transition-colors">Accounting & Bookkeeping</Link></li>
-              <li><a href="#" className="text-secondaryText  transition-colors">Financial Planning</a></li>
-              <li><a href="#" className="text-secondaryText  transition-colors">Risk Advisory</a></li>
-              <li><a href="#" className="text-secondaryText  transition-colors">Strategic Consulting</a></li>
-              <li><a href="#" className="text-secondaryText  transition-colors">Tax Compliance</a></li>
+              <li><Link to="#" className="text-secondaryText  transition-colors">Financial Planning</Link></li>
+              <li><Link to="#" className="text-secondaryText  transition-colors">Risk Advisory</Link></li>
+              <li><Link to="#" className="text-secondaryText  transition-colors">Strategic Consulting</Link></li>
+              <li><Link to="#" className="text-secondaryText  transition-colors">Tax Compliance</Link></li>
             </ul>
           </motion.div>
 
@@ -75,10 +90,7 @@ const Footer = () => {
           >
             <h4 className="text-lg font-semibold mb-6 text-secondaryText">Contact Us</h4>
             <ul className="space-y-4">
-              <li className="flex items-start">
-                <FaMapMarkerAlt className="text-secondaryText mt-1 mr-3 flex-shrink-0" />
-                <span className="text-secondaryText">123 Financial District, Suite 456<br />New York, NY 10001</span>
-              </li>
+              {/* Contact details */}
               <li className="flex items-center">
                 <FaPhone className="text-secondaryText mr-3" />
                 <a href="tel:+1234567890" className="text-secondaryText hover:text-secondaryText transition-colors">+1 (234) 567-890</a>
@@ -105,7 +117,7 @@ const Footer = () => {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-gray-500 text-sm mb-4 md:mb-0"
+            className="text-secondaryText text-sm mb-4 md:mb-0"
           >
             © {new Date().getFullYear()} Financial Solutions Inc. All rights reserved.
           </motion.p>
@@ -116,9 +128,9 @@ const Footer = () => {
             viewport={{ once: true }}
             className="flex space-x-6"
           >
-            <a href="#" className="text-gray-500  transition-colors text-sm">Privacy Policy</a>
-            <a href="#" className="text-gray-500  transition-colors text-sm">Terms of Service</a>
-            <a href="#" className="text-gray-500  transition-colors text-sm">Sitemap</a>
+            <a href="#" className="text-secondaryText  transition-colors text-sm">Privacy Policy</a>
+            <a href="#" className="text-secondaryText  transition-colors text-sm">Terms of Service</a>
+            <a href="#" className="text-secondaryText  transition-colors text-sm">Sitemap</a>
           </motion.div>
         </div>
       </div>

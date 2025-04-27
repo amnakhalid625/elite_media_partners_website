@@ -7,6 +7,7 @@ import Consult from './page/Consult';
 import Fundraising from './page/Fundrasing'; 
 import RiskAdvisory from './page/RiskAdvisor';
 import Planning from './page/Planning';
+import AboutUs from "./page/AboutUs";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path='/fundraising' element={<Fundraising />} /> 
           <Route path='/riskAdvisory' element={<RiskAdvisory />} />
           <Route path='/planning' element={<Planning />} />
+          <Route path ='/about' element={<AboutUs />} />
         </Routes>
       </BrowserRouter>
     </>

@@ -12,6 +12,7 @@ import 'swiper/css/autoplay';
 import 'swiper/css/effect-fade';
 import Services from '../../components/services/Serivces';
 import ContentCard from '../../components/contentCard/ContentCard';
+import TeamMembers from '../../components/team/TeamMembers';
 import { motion } from 'framer-motion';
 
 const slides = [
@@ -128,6 +129,7 @@ const Home = () => {
 
       <Services />
       <ContentCard />
+      <TeamMembers />
     </>
   );
 };

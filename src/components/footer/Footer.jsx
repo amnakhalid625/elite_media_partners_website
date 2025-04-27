@@ -74,10 +74,10 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-6 text-secondaryText">Our Services</h4>
             <ul className="space-y-3">
               <li><Link to="/accounting" className="text-secondaryText  transition-colors">Accounting & Bookkeeping</Link></li>
-              <li><Link to="#" className="text-secondaryText  transition-colors">Financial Planning</Link></li>
-              <li><Link to="#" className="text-secondaryText  transition-colors">Risk Advisory</Link></li>
-              <li><Link to="#" className="text-secondaryText  transition-colors">Strategic Consulting</Link></li>
-              <li><Link to="#" className="text-secondaryText  transition-colors">Tax Compliance</Link></li>
+              <li><Link to="/planning" className="text-secondaryText  transition-colors">Financial Planning</Link></li>
+              <li><Link to="/riskAdvisory" className="text-secondaryText  transition-colors">Risk Advisory</Link></li>
+              <li><Link to="/consult" className="text-secondaryText  transition-colors">Strategic Consulting</Link></li>
+              {/* <li><Link to="#" className="text-secondaryText  transition-colors">Tax Compliance</Link></li> */}
             </ul>
           </motion.div>
 

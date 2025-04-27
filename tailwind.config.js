@@ -18,7 +18,7 @@ export default {
       secondary: "#BBA04E",
       background: "#F9FAFB",
       text: "#ffffff",
-      muted: "#888888",
+      secondaryText:'#000000',
       border: "#DDDDDD",
       },
       boxShadow: {

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import logoImg from '../../assets/images/finalLogo.png';
+import {Link} from 'react-router-dom'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,7 +38,7 @@ const Navbar = () => {
           
           {/* Desktop menu */}
           <div className="hidden lg:flex lg:items-center lg:space-x-6 font-semibold">
-            <a href="#" className="text-black border-b-4 border-primary w-16 hover:border-b-4 hover:border-primary transition-all duration-300 hover:scale-105">Home</a>
+            <Link to='/' className="text-black border-b-4 border-primary w-16 hover:border-b-4 hover:border-primary transition-all duration-300 hover:scale-105">Home</Link>
             
             {/* Services dropdown with hover effect */}
             {/* <div 
@@ -75,7 +76,7 @@ const Navbar = () => {
             </div> */}
             
             {/* <a href="#" className="text-gray-700 hover:border-b-4 hover:border-primary transition-all duration-300 hover:scale-105">Insight</a> */}
-            <a href="#" className="text-gray-700 hover:border-b-4 hover:border-primary transition-all duration-300 hover:scale-105">About Us</a>
+            <Link to="/" className="text-gray-700 hover:border-b-4 hover:border-primary transition-all duration-300 hover:scale-105">About Us</Link>
             <a href="#" className="text-gray-700 hover:border-b-4 hover:border-primary transition-all duration-300 hover:scale-105">Services</a>
 
             <a href="#" className="text-gray-700 hover:border-b-4 hover:border-primary transition-all duration-300 hover:scale-105">Contact Us</a>
@@ -109,7 +110,7 @@ const Navbar = () => {
       {isOpen && (
         <div className="lg:hidden transition-all duration-300 ease-in-out">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a href="#" className="block px-3 py-2 text-base font-medium text-primary transition-colors duration-200">Home</a>
+            <Link to="/"  className="block px-3 py-2 text-base font-medium text-primary transition-colors duration-200">Home</Link>
             {/* <button 
               onClick={() => toggleDropdown(!isDropdownOpen)}
               className="flex items-center w-full px-3 py-2 text-base font-semibold text-gray-700 transition-colors duration-200"

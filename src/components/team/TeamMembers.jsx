@@ -42,34 +42,15 @@ const TeamMembers = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Heading with animated lines */}
-        <div className="flex items-center justify-center gap-3 mb-12">
-          <motion.div 
-            className="h-0.5 bg-primary w-20"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={lineVariants2}
-            transition={{ duration: 0.6 }}
-          />
-          <motion.h2 
-            className="text-3xl font-bold text-secondary"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={titleVariants}
-            transition={{ duration: 0.6 }}
-          >
-            Team Members
-          </motion.h2>
-          <motion.div 
-            className="h-0.5 bg-primary w-20"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={lineVariants2}
-            transition={{ duration: 0.6 }}
-          />
+        <div className="mb-8">
+        <div className="flex items-center justify-center gap-2">
+          <div className="w-8 h-0.5 bg-primary"></div>
+          <h2 className="text-3xl font-bold text-secondary">Our Team</h2>
+          <div className="w-8 h-0.5 bg-primary"></div>
         </div>
+        <p className="text-gray-600 text-center mt-2">We are a team of dedicated professionals who are passionate about what we do.</p>
+      </div>
+
 
         {/* Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

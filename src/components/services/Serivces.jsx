@@ -151,7 +151,7 @@ const ServiceCard = ({ service, index }) => (
     </div>
 
     <div className="p-6 relative z-20">
-      <h3 className="text-lg font-bold text-gray-900 mb-2">{service.title}</h3>
+      <h3 className="text-lg font-bold text-secondaryText mb-2">{service.title}</h3>
       <p className="text-gray-500 text-sm mb-4">{service.description}</p>
       <Link
         to={service.link}

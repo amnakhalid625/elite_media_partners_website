@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FiDollarSign, FiBarChart2, FiClipboard, FiMic, FiSearch, FiUsers } from 'react-icons/fi';
 
 const Fundraising = () => {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
@@ -56,11 +58,20 @@ const Fundraising = () => {
               viewport={{ once: true }}
               className="bg-white p-8 rounded-xl shadow-lg"
             >
-              <img 
-                src="https://media.istockphoto.com/id/1429274633/photo/businessmen-verify-the-accuracy-of-paperwork-business-reviews-are-essential-search-for.jpg?s=2048x2048&w=is&k=20&c=tla5tUuyJSXWy6fZzDTErI18JlW9G4YX_UFqgfXg3Ug=" 
-                alt="Fundraising Process Flow" 
-                className="rounded-lg w-full h-auto"
-              />
+              <div className="relative aspect-video">
+                {!imageLoaded && (
+                  <div className="absolute inset-0 bg-gray-200 animate-pulse rounded-lg"></div>
+                )}
+                <img 
+                  src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                  alt="Fundraising Process Flow" 
+                  className={`rounded-lg w-full h-full object-cover ${!imageLoaded ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`}
+                  loading="lazy"
+                  width={800}
+                  height={450}
+                  onLoad={() => setImageLoaded(true)}
+                />
+              </div>
               <div className="mt-6 text-center text-gray-600">
                 Our comprehensive fundraising approach maximizes your success potential
               </div>
@@ -79,32 +90,32 @@ const Fundraising = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                icon: <FiDollarSign className="w-8 h-8 bg-primary" />,
+                icon: <FiDollarSign className="w-8 h-8 text-primary" />,
                 title: "Investor Deck Creation",
                 description: "Visually stunning and insight-rich presentations that clearly communicate your investment potential"
               },
               {
-                icon: <FiBarChart2 className="w-8 h-8 bg-primary" />,
+                icon: <FiBarChart2 className="w-8 h-8 text-primary" />,
                 title: "Financial Modeling",
                 description: "Detailed, dynamic models that validate your projections and withstand investor scrutiny"
               },
               {
-                icon: <FiClipboard className="w-8 h-8 bg-primary" />,
+                icon: <FiClipboard className="w-8 h-8 text-primary" />,
                 title: "Due Diligence Readiness",
                 description: "Full preparation of operational, legal, and financial documentation for investor review"
               },
               {
-                icon: <FiMic className="w-8 h-8 bg-primary" />,
+                icon: <FiMic className="w-8 h-8 text-primary" />,
                 title: "Pitch Coaching",
                 description: "Expert coaching sessions to refine your pitch and deliver with clarity and impact"
               },
               {
-                icon: <FiSearch className="w-8 h-8 bg-primary" />,
+                icon: <FiSearch className="w-8 h-8 text-primary" />,
                 title: "Market Opportunity Analysis",
                 description: "Data-backed analysis highlighting market size, trends, and positioning"
               },
               {
-                icon: <FiUsers className="w-8 h-8 bg-primary" />,
+                icon: <FiUsers className="w-8 h-8 text-primary" />,
                 title: "Investor Relations",
                 description: "Ongoing strategic guidance to manage investor expectations and communications"
               }

@@ -1,6 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaQuoteLeft, FaStar } from 'react-icons/fa';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 const Testimonial = () => {
   const testimonials = [
@@ -8,8 +12,7 @@ const Testimonial = () => {
       quote: "The financial advisory we received was exceptional. Their team helped us streamline operations and increase profitability by 30% in just one year.",
       name: "Sarah Johnson",
       position: "CEO, TechSolutions Inc.",
-      rating: 5,
-      image: "/images/testimonials/client1.jpg"
+      image: 'https://media.istockphoto.com/id/2187981222/photo/head-and-shoulders-portrait-of-businesswoman-sitting-at-desk-in-office-working-on-computer.jpg?s=612x612&w=0&k=20&c=yoRaRte1OPkMhHId1JFNm6QJfoQf5kbd_2CjO1ueRbg='
     },
     {
       quote: "Their risk assessment services saved our company from potential compliance issues. Truly professional and thorough in their approach.",
@@ -24,7 +27,35 @@ const Testimonial = () => {
       position: "Founder, GreenInnovate",
       rating: 4,
       image: "/images/testimonials/client3.jpg"
-    }
+    },
+    {
+      quote: "Their accounting services brought clarity to our financials and helped us make better business decisions. Highly recommended!",
+      name: "David Wilson",
+      position: "Director, Wilson & Co.",
+      rating: 5,
+      image: "/images/testimonials/client4.jpg"
+    },
+    {
+      quote: "The strategic advisory transformed our business model and doubled our valuation in 18 months.",
+      name: "Lisa Park",
+      position: "Managing Partner, Horizon Group",
+      rating: 5,
+      image: "/images/testimonials/client5.jpg"
+    },
+    {
+        quote: "The strategic advisory transformed our business model and doubled our valuation in 18 months.",
+        name: "Lisa Park",
+        position: "Managing Partner, Horizon Group",
+        rating: 5,
+        image: "/images/testimonials/client5.jpg"
+      },
+      {
+        quote: "The strategic advisory transformed our business model and doubled our valuation in 18 months.",
+        name: "Lisa Park",
+        position: "Managing Partner, Horizon Group",
+        rating: 5,
+        image: "/images/testimonials/client5.jpg"
+      }
   ];
 
   return (
@@ -44,57 +75,87 @@ const Testimonial = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              whileHover={{ y: -5 }}
-              className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
-            >
-              <div className="flex mb-4 text-teal-500">
-                {[...Array(5)].map((_, i) => (
-                  <FaStar 
-                    key={i} 
-                    className={i < testimonial.rating ? "text-yellow-400" : "text-gray-300"} 
-                  />
-                ))}
-              </div>
-              
-              <FaQuoteLeft className="text-gray-300 text-2xl mb-4" />
-              
-              <p className="text-gray-600 italic mb-6">{testimonial.quote}</p>
-              
-              <div className="flex items-center">
-                <img 
-                  src={testimonial.image} 
-                  alt={testimonial.name}
-                  className="w-12 h-12 rounded-full object-cover mr-4"
-                />
-                <div>
-                  <h4 className="font-semibold text-gray-800">{testimonial.name}</h4>
-                  <p className="text-sm text-gray-600">{testimonial.position}</p>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+        <div className="relative">
+          <Swiper
+            slidesPerView={1}
+            spaceBetween={30}
+            autoplay={{
+              delay: 5000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true
+            }}
+            pagination={{
+              clickable: true,
+              el: '.testimonial-pagination',
+            }}
+            breakpoints={{
+              640: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 40,
+              },
+            }}
+            modules={[Pagination, Autoplay]}
+            className="pb-12"
+          >
+            {testimonials.map((testimonial, index) => (
+              <SwiperSlide key={index}>
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+                  whileHover={{ y: -5 }}
+                  className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 h-full"
+                >
+                 
+                  
+                  <FaQuoteLeft className="text-gray-300 text-2xl mb-4" />
+                  
+                  <p className="text-gray-600 italic mb-6">{testimonial.quote}</p>
+                  
+                  <div className="flex items-center">
+                    <img 
+                      src={testimonial.image} 
+                      alt={testimonial.name}
+                      className="w-12 h-12 rounded-full object-cover mr-4"
+                    />
+                    <div>
+                      <h4 className="font-semibold text-gray-800">{testimonial.name}</h4>
+                      <p className="text-sm text-gray-600">{testimonial.position}</p>
+                    </div>
+                  </div>
+                </motion.div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.4 }}
-          viewport={{ once: true }}
-          className="text-center mt-16"
-        >
-          <button className="bg-teal-600 hover:bg-teal-700 text-white px-8 py-3 rounded-lg font-medium transition-colors duration-300">
-            View More Testimonials
-          </button>
-        </motion.div>
+          <div className="testimonial-pagination flex justify-center mt-8 gap-2"></div>
+        </div>
       </div>
+
+      <style jsx global>{`
+        .swiper-pagination-bullet {
+          width: 10px;
+          height: 10px;
+          background: #ccc;
+          opacity: 1;
+          border-radius: 50%;
+          transition: all 0.3s ease;
+        }
+        .swiper-pagination-bullet-active {
+          width: 14px;
+          height: 14px;
+          background: #00555A;
+          transform: scale(1.2);
+        }
+        .swiper-custom-pagination {
+          margin-top: 20px;
+        }
+      `}</style>
     </section>
   );
 };

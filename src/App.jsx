@@ -2,9 +2,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Navbar from "./components/navbar/Navbar"
 import Home from "./page/home/Home"
 import Accounting from './page/Accounting'
-import Strategy from "./page/Strategy"
+// import Strategy from "./page/Strategy"
 import Consult from './page/Consult'
-import Fundrasing from './page/Fundrasing'
+import Fundrasing from './page/Strategy'
 import RiskAdvisory from './page/RiskAdvisor'
 import Planning from './page/Planning'
 
@@ -17,7 +17,7 @@ function App() {
 <Routes>
 <Route path="/" element={<Home/>} />
 <Route path='/accounting' element={<Accounting />} />
-<Route path='/strategy' element={<Strategy />} />
+{/* <Route path='/strategy' element={<Strategy />} /> */}
 <Route path='/consult' element={<Consult/>} />
 <Route path='/fundrasing' element={<Fundrasing />} />
 <Route path='/riskAdvisory' element={<RiskAdvisory />} />

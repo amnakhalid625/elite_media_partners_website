@@ -46,9 +46,15 @@ const Consult = () => {
               <p className="text-gray-600 mb-8 text-lg leading-relaxed">
                 From initial assessment to implementation support, we're with you every step of the way to ensure sustainable success.
               </p>
+              <a 
+              href="https://wa.me/923001234567" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              >
               <button className="bg-primary hover:bg-secondary text-white px-6 py-3 rounded-lg transition duration-300">
                 Start Your Consultation
               </button>
+              </a>
             </motion.div>
 
             <motion.div

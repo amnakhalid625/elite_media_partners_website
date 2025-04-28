@@ -46,9 +46,15 @@ const RiskAdvisor = () => {
               <p className="text-gray-600 mb-8 text-lg leading-relaxed">
                 The result is a resilient organization with a clear strategy to navigate volatility and safeguard stakeholder value.
               </p>
+              <a
+              href="https://wa.me/923001234567" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              >
               <button className="bg-primary hover:bg-secondary text-white px-6 py-3 rounded-lg transition duration-300">
                 Assess Your Risks
               </button>
+              </a>
             </motion.div>
 
             <motion.div
@@ -138,9 +144,15 @@ const RiskAdvisor = () => {
           <p className="text-xl mb-8 max-w-3xl mx-auto">
             Our specialists will help you identify vulnerabilities and build proactive defenses
           </p>
+          <a
+          href="https://wa.me/923001234567" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          >
           <button className="bg-white text-primary hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition duration-300">
             Get Risk Assessment
           </button>
+          </a>
         </div>
       </section>
     </div>

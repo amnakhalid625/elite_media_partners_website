@@ -1,7 +1,46 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 const ContactUs = () => {
+  const [successMessage, setSuccessMessage] = useState('');
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "00a22c40-b7c7-4daf-9e9f-dbc47dc0d9e0");
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: json
+    }).then((res) => res.json());
+
+    if (res.success) {
+      console.log("Success", res);
+      setSuccessMessage("Thank you for contacting us! We'll get back to you soon.");
+      event.target.reset(); 
+      Swal.fire({
+        title: "Good job!",
+        text: "You Message has been send!",
+        icon: "success"
+      });
+    }
+    else{
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Something went wrong!",
+      });
+    }
+  };
+
   return (
     <section className="pt-28 pb-16 px-6 md:px-16 bg-background min-h-screen">
       <div className="max-w-6xl mx-auto">
@@ -22,6 +61,7 @@ const ContactUs = () => {
 
         {/* Contact Form */}
         <motion.form
+          onSubmit={onSubmit}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -31,6 +71,7 @@ const ContactUs = () => {
             <div>
               <label className="block mb-2 text-sm font-medium text-secondary">Name</label>
               <input 
+                name="name"
                 type="text" 
                 placeholder="Your Name" 
                 className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-primary"
@@ -40,6 +81,7 @@ const ContactUs = () => {
             <div>
               <label className="block mb-2 text-sm font-medium text-secondary">Email</label>
               <input 
+                name="email"
                 type="email" 
                 placeholder="Your Email" 
                 className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-primary"
@@ -51,6 +93,7 @@ const ContactUs = () => {
           <div>
             <label className="block mb-2 text-sm font-medium text-secondary">Message</label>
             <textarea
+              name="message"
               placeholder="Your Message"
               rows="5"
               className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-primary"
@@ -64,6 +107,11 @@ const ContactUs = () => {
           >
             Send Message
           </button>
+
+          {/* Success Message */}
+          {successMessage && (
+            <p className="text-green-600 mt-4 font-semibold">{successMessage}</p>
+          )}
         </motion.form>
       </div>
     </section>

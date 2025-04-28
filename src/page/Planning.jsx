@@ -43,10 +43,16 @@ const Planning = () => {
               <p className="text-gray-600 mb-6 text-lg leading-relaxed">
                 Our FP&A services help you anticipate challenges and seize growth prospects. With clear visibility into cash flow and key financial drivers, your leadership team can plan for the future with confidence and agility.
               </p>
+              <a 
+              href="https://wa.me/923001234567" 
+              target="_blank" 
+              rel="noopener noreferrer">
               <button className="bg-primary hover:bg-secondary text-white px-6 py-3 rounded-lg transition duration-300">
                 Get Financial Insights
               </button>
+              </a>
             </motion.div>
+           
 
             <motion.div
               initial={{ opacity: 0, x: 20 }}
@@ -145,9 +151,15 @@ const Planning = () => {
           <p className="text-xl mb-8 max-w-3xl mx-auto">
             Transform your financial data into actionable insights that drive business growth
           </p>
+          <a
+          href="https://wa.me/923001234567" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          >
           <button className="bg-white text-primary hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition duration-300">
             Get Your Financial Plan
           </button>
+          </a>
         </div>
       </section>
     </div>

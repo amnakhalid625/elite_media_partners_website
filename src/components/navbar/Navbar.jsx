@@ -20,9 +20,9 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-26">
           {/* Logo */}
-          <a href="#" className="flex items-center">
+          <Link to="/" className="flex items-center">
             <img src={logoImg} className="h-24" alt="Company Logo" />
-          </a>
+          </Link>
           
           {/* Mobile menu button */}
           <div className="lg:hidden">

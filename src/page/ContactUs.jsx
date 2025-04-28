@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import Swal from 'sweetalert2'; // ✅ Important!
 
 const ContactUs = () => {
   const [successMessage, setSuccessMessage] = useState('');
@@ -25,14 +26,19 @@ const ContactUs = () => {
     if (res.success) {
       console.log("Success", res);
       setSuccessMessage("Thank you for contacting us! We'll get back to you soon.");
-      event.target.reset(); 
+      event.target.reset(); // ✅ Clears the form
+
       Swal.fire({
         title: "Good job!",
-        text: "You Message has been send!",
+        text: "Your message has been sent!",
         icon: "success"
       });
-    }
-    else{
+
+      // Clear success message after 5 seconds
+      setTimeout(() => {
+        setSuccessMessage('');
+      }, 5000);
+    } else {
       Swal.fire({
         icon: "error",
         title: "Oops...",

@@ -148,9 +148,16 @@ const Consult = () => {
           <p className="text-xl mb-8 max-w-3xl mx-auto">
             Partner with our experts to develop and execute winning strategies
           </p>
+          <a 
+          href="https://wa.me/923001234567" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          
+          >
           <button className="bg-white text-primary hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition duration-300">
             Schedule Consultation
           </button>
+          </a>
         </div>
       </section>
     </div>

@@ -89,6 +89,11 @@ const Strategy = () => {
               <p className="text-gray-600 mb-8 text-lg leading-relaxed">
                 Beyond the pitch, we prepare your financials for rigorous scrutiny. Since cash flow mismanagement remains a top reason for startup failure, we ensure your financials are airtight and investor-ready — setting the foundation for a successful fundraising journey.
               </p>
+              <a
+              href="https://wa.me/923001234567" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              >
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -96,6 +101,7 @@ const Strategy = () => {
               >
                 Get Started with Fundraising
               </motion.button>
+              </a>
             </motion.div>
 
             <motion.div
@@ -175,6 +181,11 @@ const Strategy = () => {
           >
             Partner with experts who understand what investors need to see, and let's secure your next round of funding with confidence.
           </motion.p>
+          <a
+          href="https://wa.me/923001234567" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          >
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -182,6 +193,7 @@ const Strategy = () => {
           >
             Schedule a Strategy Call
           </motion.button>
+          </a>
         </div>
       </section>
     </div>

@@ -41,9 +41,16 @@ const Accounting = () => {
               <p className="text-gray-600 mb-8 text-lg leading-relaxed">
                 Our smart systems and rigorous processes keep your books perfectly organized and audit-ready, ensuring your financials are always investor-grade and compliance-proof.
               </p>
-              <button className="bg-teal-700 hover:bg-teal-800 text-white px-6 py-3 rounded-lg transition duration-300">
+              <a 
+            href="https://wa.me/923001234567" 
+            target="_blank" 
+            rel="noopener noreferrer"
+              >
+              <button 
+              className="bg-teal-700 hover:bg-teal-800 text-white px-6 py-3 rounded-lg transition duration-300">
                 Get Your Free Consultation
               </button>
+              </a>
             </motion.div>
 
             <motion.div
@@ -134,9 +141,15 @@ const Accounting = () => {
           <p className="text-xl mb-8 max-w-3xl mx-auto">
             Let our experts handle your financials so you can focus on growing your business
           </p>
+          <a
+          href="https://wa.me/923001234567" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          >
           <button className="bg-white text-teal-700 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition duration-300">
             Schedule a Consultation
           </button>
+          </a>
         </div>
       </section>
     </div>

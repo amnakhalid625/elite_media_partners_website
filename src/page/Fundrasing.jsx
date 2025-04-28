@@ -46,9 +46,15 @@ const Fundraising = () => {
               <p className="text-gray-600 mb-8 text-lg leading-relaxed">
                 We ensure your financials are airtight and investor-ready — setting the foundation for a successful fundraising journey.
               </p>
+              <a
+              href="https://wa.me/923001234567" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              >
               <button className="bg-primary hover:bg-secondary text-white px-6 py-3 rounded-lg transition duration-300">
                 Get Started with Fundraising
               </button>
+              </a>
             </motion.div>
 
             <motion.div
@@ -148,9 +154,16 @@ const Fundraising = () => {
           <p className="text-xl mb-8 max-w-3xl mx-auto">
             Let our experts craft your investment story and prepare all the materials you need for a successful raise
           </p>
+          <a
+          
+          href="https://wa.me/923001234567" 
+              target="_blank" 
+              rel="noopener noreferrer"
+          >
           <button className="bg-white text-primary hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition duration-300">
             Schedule a Consultation
           </button>
+          </a>
         </div>
       </section>
     </div>

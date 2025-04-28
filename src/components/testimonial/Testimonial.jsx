@@ -12,31 +12,26 @@ const Testimonial = () => {
       quote: "The financial advisory we received was exceptional. Their team helped us streamline operations and increase profitability by 30% in just one year.",
       name: "Sarah Johnson",
       position: "CEO, TechSolutions Inc.",
-      image: 'https://media.istockphoto.com/id/2187981222/photo/head-and-shoulders-portrait-of-businesswoman-sitting-at-desk-in-office-working-on-computer.jpg?s=612x612&w=0&k=20&c=yoRaRte1OPkMhHId1JFNm6QJfoQf5kbd_2CjO1ueRbg='
     },
     {
       quote: "Their risk assessment services saved our company from potential compliance issues. Truly professional and thorough in their approach.",
       name: "Michael Chen",
       position: "CFO, Global Ventures",
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRo5wEk9NDXVRY9kYNehvBq9gAAReTy5HuBTQ&s'
     },
     {
       quote: "The fundraising support was game-changing for our startup. We secured $5M in funding thanks to their strategic guidance.",
       name: "Emma Rodriguez",
       position: "Founder, GreenInnovate",
-      image: 'https://media.istockphoto.com/id/806760428/photo/happy-latin-american-businesswoman-in-office.jpg?s=612x612&w=0&k=20&c=ydJQoIQHJlt3sv0GCAeq1exnYZ2PkkiIOd_67dbYdyk='
     },
     {
       quote: "Their accounting services brought clarity to our financials and helped us make better business decisions. Highly recommended!",
       name: "David Wilson",
       position: "Director, Wilson & Co.",
-      image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmVzc2lvbmFsJTIwbWFufGVufDB8fDB8fHww'
     },
     {
       quote: "The strategic advisory transformed our business model and doubled our valuation in 18 months.",
       name: "Lisa Park",
       position: "Managing Partner, Horizon Group",
-      image: 'https://media.istockphoto.com/id/868502600/photo/woman-sitting-in-cafe.jpg?s=612x612&w=0&k=20&c=cqR-W16X8Z21JE_X1TARv2qMYRoMGK7pNc1mZAOiY8o='
     },
    
   ];
@@ -94,18 +89,10 @@ const Testimonial = () => {
                   <FaQuoteLeft className="text-gray-300 text-2xl mb-4" />
                   
                   <p className="text-gray-600 italic mb-6">{testimonial.quote}</p>
-                  
-                  <div className="flex items-center">
-                    <img 
-                      src={testimonial.image} 
-                      alt={testimonial.name}
-                      className="w-12 h-12 rounded-full object-cover mr-4"
-                    />
-                    <div>
-                      <h4 className="font-semibold text-secondaryText">{testimonial.name}</h4>
-                      <p className="text-sm text-gray-600">{testimonial.position}</p>
-                    </div>
-                  </div>
+
+
+
+
                 </motion.div>
               </SwiperSlide>
             ))}

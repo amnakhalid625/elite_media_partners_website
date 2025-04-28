@@ -95,17 +95,12 @@ const Navbar = () => {
             </a>
             
             <Link 
-  to="/contact" 
-  onClick={(e) => {
-    e.preventDefault();        // stop normal link behavior
-    setIsOpen(false);           // close the menu
-    window.open("/contact", "_blank");  // open in a new tab
-  }}
-  className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200"
->
-  Contact Us
-</Link>
-
+              to="/contact" 
+              onClick={() => setIsOpen(false)}
+              className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200"
+            >
+              Contact Us
+            </Link>
             
             <div className="px-3 py-2">
               <a 

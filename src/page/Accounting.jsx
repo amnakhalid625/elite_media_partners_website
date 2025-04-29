@@ -6,7 +6,7 @@ const Accounting = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-teal-700 to-teal-900 text-white">
+      <section className="py-20bg-primary text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -47,7 +47,7 @@ const Accounting = () => {
             rel="noopener noreferrer"
               >
               <button 
-              className="bg-teal-700 hover:bg-teal-800 text-white px-6 py-3 rounded-lg transition duration-300">
+              className="bg-primary hover:bg-secondary text-white px-6 py-3 rounded-lg transition duration-300">
                 Get Your Free Consultation
               </button>
               </a>
@@ -83,32 +83,32 @@ const Accounting = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                icon: <FiFileText className="w-8 h-8 text-teal-700" />,
+                icon: <FiFileText className="w-8 h-8 text-primary" />,
                 title: "Financial Reporting",
                 description: "Accurate monthly, quarterly, and annual financial statements prepared to international standards"
               },
               {
-                icon: <FiTrendingUp className="w-8 h-8 text-teal-700" />,
+                icon: <FiTrendingUp className="w-8 h-8 text-primary" />,
                 title: "Tax Compliance",
                 description: "Timely filing and optimization strategies to minimize liabilities while maintaining compliance"
               },
               {
-                icon: <FiShield className="w-8 h-8 text-teal-700" />,
+                icon: <FiShield className="w-8 h-8 text-primary" />,
                 title: "Audit Support",
                 description: "Complete preparation and representation during financial audits and reviews"
               },
               {
-                icon: <FiPieChart className="w-8 h-8 text-teal-700" />,
+                icon: <FiPieChart className="w-8 h-8 text-primary" />,
                 title: "Management Accounting",
                 description: "Actionable insights and KPI tracking to support strategic decision-making"
               },
               {
-                icon: <FiCheckCircle className="w-8 h-8 text-teal-700" />,
+                icon: <FiCheckCircle className="w-8 h-8 text-primary" />,
                 title: "Regulatory Compliance",
                 description: "Ensuring adherence to all financial regulations and reporting requirements"
               },
               {
-                icon: <FiFileText className="w-8 h-8 text-teal-700" />,
+                icon: <FiFileText className="w-8 h-8 text-primary" />,
                 title: "Payroll Processing",
                 description: "Accurate and timely payroll services with full compliance documentation"
               }
@@ -135,7 +135,7 @@ const Accounting = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-teal-700 text-white">
+      <section className="py-20 bg-primary text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-6">Ready to Streamline Your Accounting?</h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
@@ -146,7 +146,7 @@ const Accounting = () => {
           target="_blank" 
           rel="noopener noreferrer"
           >
-          <button className="bg-white text-teal-700 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition duration-300">
+          <button className="bg-white text-primary hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition duration-300">
             Schedule a Consultation
           </button>
           </a>

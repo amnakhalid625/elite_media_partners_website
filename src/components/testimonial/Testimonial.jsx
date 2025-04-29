@@ -1,55 +1,52 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaQuoteLeft, FaStar } from 'react-icons/fa';
+import { FaQuoteLeft } from 'react-icons/fa';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import db from "../../firebase/firebaseConfig.js";
-
-
+import { collection, addDoc, onSnapshot, query, orderBy } from 'firebase/firestore';
+import db from "../../firebase/firebaseConfig";
 
 const Testimonial = () => {
-  const testimonials = [
-    {
-      quote: "The financial advisory we received was exceptional. Their team helped us streamline operations and increase profitability by 30% in just one year.",
-      name: "Sarah Johnson",
-      position: "CEO, TechSolutions Inc.",
-    },
-    {
-      quote: "Their risk assessment services saved our company from potential compliance issues. Truly professional and thorough in their approach.",
-      name: "Michael Chen",
-      position: "CFO, Global Ventures",
-    },
-    {
-      quote: "The fundraising support was game-changing for our startup. We secured $5M in funding thanks to their strategic guidance.",
-      name: "Emma Rodriguez",
-      position: "Founder, GreenInnovate",
-    },
-    {
-      quote: "Their accounting services brought clarity to our financials and helped us make better business decisions. Highly recommended!",
-      name: "David Wilson",
-      position: "Director, Wilson & Co.",
-    },
-    {
-      quote: "The strategic advisory transformed our business model and doubled our valuation in 18 months.",
-      name: "Lisa Park",
-      position: "Managing Partner, Horizon Group",
-    },
-   
-  ];
+  const [testimonials, setTestimonials] = useState([]);
+  const [showModal, setShowModal] = useState(false);
+  const [newTestimonial, setNewTestimonial] = useState({ name: '', position: '', quote: '' });
+
+  useEffect(() => {
+    const q = query(collection(db, "testimonials"), orderBy("createdAt", "desc"));
+    const unsubscribe = onSnapshot(q, (snapshot) => {
+      const fetchedTestimonials = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+      setTestimonials(fetchedTestimonials);
+    });
+
+    return () => unsubscribe();
+  }, []);
+
+  const handleAddTestimonial = async () => {
+    if (!newTestimonial.name || !newTestimonial.position || !newTestimonial.quote) {
+      alert('Please fill in all fields.');
+      return;
+    }
+    await addDoc(collection(db, "testimonials"), {
+      ...newTestimonial,
+      createdAt: new Date()
+    });
+    setNewTestimonial({ name: '', position: '', quote: '' });
+    setShowModal(false);
+  };
 
   return (
-    <section className="py-20 ">
+    <section className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="mb-8">
-        <div className="flex items-center justify-center gap-2">
-          <div className="w-8 h-0.5 bg-primary"></div>
-          <h2 className="text-3xl font-bold text-secondary">Testimonials</h2>
-          <div className="w-8 h-0.5 bg-primary"></div>
+        <div className="mb-8">
+          <div className="flex items-center justify-center gap-2">
+            <div className="w-8 h-0.5 bg-primary"></div>
+            <h2 className="text-3xl font-bold text-secondary">Testimonials</h2>
+            <div className="w-8 h-0.5 bg-primary"></div>
+          </div>
+          <p className="text-secondaryText text-center mt-2">What our clients have to say.</p>
         </div>
-        <p className="text-secondaryText text-center mt-2">What our clients have to say.</p>
-      </div>
 
         <div className="relative">
           <Swiper
@@ -65,19 +62,13 @@ const Testimonial = () => {
               el: '.testimonial-pagination',
             }}
             breakpoints={{
-              640: {
-                slidesPerView: 2,
-                spaceBetween: 30,
-              },
-              1024: {
-                slidesPerView: 3,
-                spaceBetween: 40,
-              },
+              640: { slidesPerView: 2, spaceBetween: 30 },
+              1024: { slidesPerView: 3, spaceBetween: 40 },
             }}
             modules={[Pagination, Autoplay]}
             className="pb-12"
           >
-            {testimonials.map((testimonial, index) => (
+            {testimonials.slice(0, 4).map((testimonial, index) => (
               <SwiperSlide key={index}>
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
@@ -87,27 +78,70 @@ const Testimonial = () => {
                   whileHover={{ y: -5 }}
                   className="bg-background p-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 h-full"
                 >
-                 
-                  
                   <FaQuoteLeft className="text-gray-300 text-2xl mb-4" />
-                  
                   <p className="text-gray-600 italic mb-6">{testimonial.quote}</p>
-
-
-
-
+                  <h3 className="font-bold text-primary">{testimonial.name}</h3>
+                  <p className="text-sm text-secondaryText">{testimonial.position}</p>
                 </motion.div>
               </SwiperSlide>
             ))}
           </Swiper>
-
           <div className="testimonial-pagination flex justify-center mt-8 gap-2"></div>
         </div>
 
-
-        <div>
-          <button>Add Your Experience</button>
+        {/* Button */}
+        <div className="flex justify-center mt-8">
+          <button
+            onClick={() => setShowModal(true)}
+            className="px-6 py-3 bg-primary text-white rounded-full hover:bg-primary-dark transition"
+          >
+            Add Your Experience
+          </button>
         </div>
+
+        {/* Modal */}
+        {showModal && (
+          <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+            <div className="bg-white rounded-lg p-8 w-full max-w-md">
+              <h3 className="text-2xl font-bold mb-4 text-center">Share Your Experience</h3>
+              <input
+                type="text"
+                placeholder="Your Name"
+                value={newTestimonial.name}
+                onChange={(e) => setNewTestimonial({ ...newTestimonial, name: e.target.value })}
+                className="w-full p-2 border rounded mb-4"
+              />
+              <input
+                type="text"
+                placeholder="Your Position"
+                value={newTestimonial.position}
+                onChange={(e) => setNewTestimonial({ ...newTestimonial, position: e.target.value })}
+                className="w-full p-2 border rounded mb-4"
+              />
+              <textarea
+                placeholder="Your Testimonial"
+                value={newTestimonial.quote}
+                onChange={(e) => setNewTestimonial({ ...newTestimonial, quote: e.target.value })}
+                className="w-full p-2 border rounded mb-4"
+                rows="4"
+              ></textarea>
+              <div className="flex justify-between">
+                <button
+                  onClick={() => setShowModal(false)}
+                  className="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400"
+                >
+                  Cancel
+                </button>
+                <button
+                  onClick={handleAddTestimonial}
+                  className="px-4 py-2 bg-primary text-white rounded hover:bg-primary-dark"
+                >
+                  Submit
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
 
       <style jsx global>{`
@@ -124,9 +158,6 @@ const Testimonial = () => {
           height: 14px;
           background: #00555A;
           transform: scale(1.2);
-        }
-        .swiper-custom-pagination {
-          margin-top: 20px;
         }
       `}</style>
     </section>

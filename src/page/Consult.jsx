@@ -47,7 +47,7 @@ const Consult = () => {
                 From initial assessment to implementation support, we're with you every step of the way to ensure sustainable success.
               </p>
               <a 
-              href="https://wa.me/923001234567" 
+              href="https://wa.me/923331595761" 
               target="_blank" 
               rel="noopener noreferrer"
               >
@@ -155,7 +155,7 @@ const Consult = () => {
             Partner with our experts to develop and execute winning strategies
           </p>
           <a 
-          href="https://wa.me/923001234567" 
+          href="https://wa.me/923331595761" 
           target="_blank" 
           rel="noopener noreferrer"
           

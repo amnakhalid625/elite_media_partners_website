@@ -47,7 +47,7 @@ const RiskAdvisor = () => {
                 The result is a resilient organization with a clear strategy to navigate volatility and safeguard stakeholder value.
               </p>
               <a
-              href="https://wa.me/923001234567" 
+              href="https://wa.me/923331595761" 
               target="_blank" 
               rel="noopener noreferrer"
               >
@@ -145,7 +145,7 @@ const RiskAdvisor = () => {
             Our specialists will help you identify vulnerabilities and build proactive defenses
           </p>
           <a
-          href="https://wa.me/923001234567" 
+          href="https://wa.me/923331595761" 
           target="_blank" 
           rel="noopener noreferrer"
           >

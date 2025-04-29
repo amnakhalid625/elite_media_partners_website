@@ -93,11 +93,11 @@ const Footer = () => {
               {/* Contact details */}
               <li className="flex items-center">
                 <FaPhone className="text-secondaryText mr-3" />
-                <a href="tel:+1234567890" className="text-secondaryText hover:text-secondaryText transition-colors">+1 (234) 567-890</a>
+                <a href="tel:+1234567890" className="text-secondaryText hover:text-secondaryText transition-colors">+923331595761</a>
               </li>
               <li className="flex items-center">
                 <FaEnvelope className="text-secondaryText mr-3" />
-                <a href="mailto:info@financialsolutions.com" className="text-secondaryText hover:text-secondaryText transition-colors">info@financialsolutions.com</a>
+                <a href="mailto:info@financialsolutions.com" className="text-secondaryText hover:text-secondaryText transition-colors">elitepartners00@gmail.com</a>
               </li>
               <li className="flex items-center">
                 <FaClock className="text-secondaryText mr-3" />

@@ -47,7 +47,7 @@ const Fundraising = () => {
                 We ensure your financials are airtight and investor-ready — setting the foundation for a successful fundraising journey.
               </p>
               <a
-              href="https://wa.me/923001234567" 
+              href="https://wa.me/923331595761" 
               target="_blank" 
               rel="noopener noreferrer"
               >
@@ -156,7 +156,7 @@ const Fundraising = () => {
           </p>
           <a
           
-          href="https://wa.me/923001234567" 
+          href="https://wa.me/923331595761" 
               target="_blank" 
               rel="noopener noreferrer"
           >

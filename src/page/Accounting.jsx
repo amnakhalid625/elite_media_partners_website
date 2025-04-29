@@ -42,7 +42,7 @@ const Accounting = () => {
                 Our smart systems and rigorous processes keep your books perfectly organized and audit-ready, ensuring your financials are always investor-grade and compliance-proof.
               </p>
               <a 
-            href="https://wa.me/923001234567" 
+            href="https://wa.me/923331595761" 
             target="_blank" 
             rel="noopener noreferrer"
               >
@@ -142,7 +142,7 @@ const Accounting = () => {
             Let our experts handle your financials so you can focus on growing your business
           </p>
           <a
-          href="https://wa.me/923001234567" 
+          href="https://wa.me/923331595761" 
           target="_blank" 
           rel="noopener noreferrer"
           >

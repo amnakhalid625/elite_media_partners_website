@@ -44,7 +44,7 @@ const Planning = () => {
                 Our FP&A services help you anticipate challenges and seize growth prospects. With clear visibility into cash flow and key financial drivers, your leadership team can plan for the future with confidence and agility.
               </p>
               <a 
-              href="https://wa.me/923001234567" 
+              href="https://wa.me/923331595761" 
               target="_blank" 
               rel="noopener noreferrer">
               <button className="bg-primary hover:bg-secondary text-white px-6 py-3 rounded-lg transition duration-300">
@@ -152,7 +152,7 @@ const Planning = () => {
             Transform your financial data into actionable insights that drive business growth
           </p>
           <a
-          href="https://wa.me/923001234567" 
+          href="https://wa.me/923331595761" 
           target="_blank" 
           rel="noopener noreferrer"
           >

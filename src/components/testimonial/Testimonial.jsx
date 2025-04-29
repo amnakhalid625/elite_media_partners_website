@@ -5,6 +5,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import db from "../../firebase/firebaseConfig.js";
+
+
 
 const Testimonial = () => {
   const testimonials = [
@@ -99,6 +102,11 @@ const Testimonial = () => {
           </Swiper>
 
           <div className="testimonial-pagination flex justify-center mt-8 gap-2"></div>
+        </div>
+
+
+        <div>
+          <button>Add Your Experience</button>
         </div>
       </div>
 

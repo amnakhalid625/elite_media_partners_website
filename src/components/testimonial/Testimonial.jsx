@@ -5,33 +5,59 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { collection, addDoc, onSnapshot, query, orderBy } from 'firebase/firestore';
+import { collection, addDoc, getDocs, serverTimestamp } from 'firebase/firestore';
 import db from "../../firebase/firebaseConfig";
 
+const defaultTestimonials = [
+  {
+    quote: "The financial advisory we received was exceptional. Their team helped us streamline operations and increase profitability by 30% in just one year.",
+    name: "Sarah Johnson",
+    position: "CEO, TechSolutions Inc.",
+  },
+  {
+    quote: "Their risk assessment services saved our company from potential compliance issues. Truly professional and thorough in their approach.",
+    name: "Michael Chen",
+    position: "CFO, Global Ventures",
+  },
+  {
+    quote: "The fundraising support was game-changing for our startup. We secured $5M in funding thanks to their strategic guidance.",
+    name: "Emma Rodriguez",
+    position: "Founder, GreenInnovate",
+  },
+  {
+    quote: "Their accounting services brought clarity to our financials and helped us make better business decisions. Highly recommended!",
+    name: "David Wilson",
+    position: "Director, Wilson & Co.",
+  },
+];
+
 const Testimonial = () => {
-  const [testimonials, setTestimonials] = useState([]);
+  const [testimonials, setTestimonials] = useState(defaultTestimonials);
   const [showModal, setShowModal] = useState(false);
   const [newTestimonial, setNewTestimonial] = useState({ name: '', position: '', quote: '' });
 
   useEffect(() => {
-    const q = query(collection(db, "testimonials"), orderBy("createdAt", "desc"));
-    const unsubscribe = onSnapshot(q, (snapshot) => {
-      const fetchedTestimonials = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-      setTestimonials(fetchedTestimonials);
-    });
-
-    return () => unsubscribe();
+    const fetchTestimonials = async () => {
+      const snapshot = await getDocs(collection(db, "testimonials"));
+      const firestoreTestimonials = snapshot.docs.map(doc => doc.data());
+      setTestimonials([...defaultTestimonials, ...firestoreTestimonials]);
+    };
+    fetchTestimonials();
   }, []);
 
   const handleAddTestimonial = async () => {
-    if (!newTestimonial.name || !newTestimonial.position || !newTestimonial.quote) {
-      alert('Please fill in all fields.');
+    const { name, position, quote } = newTestimonial;
+    if (!name || !position || !quote) {
+      alert("Please fill all fields.");
       return;
     }
+
     await addDoc(collection(db, "testimonials"), {
       ...newTestimonial,
-      createdAt: new Date()
+      createdAt: serverTimestamp(),
     });
+
+    setTestimonials(prev => [...prev, newTestimonial]);
     setNewTestimonial({ name: '', position: '', quote: '' });
     setShowModal(false);
   };
@@ -48,48 +74,48 @@ const Testimonial = () => {
           <p className="text-secondaryText text-center mt-2">What our clients have to say.</p>
         </div>
 
-        <div className="relative">
-          <Swiper
-            slidesPerView={1}
-            spaceBetween={30}
-            autoplay={{
-              delay: 5000,
-              disableOnInteraction: false,
-              pauseOnMouseEnter: true
-            }}
-            pagination={{
-              clickable: true,
-              el: '.testimonial-pagination',
-            }}
-            breakpoints={{
-              640: { slidesPerView: 2, spaceBetween: 30 },
-              1024: { slidesPerView: 3, spaceBetween: 40 },
-            }}
-            modules={[Pagination, Autoplay]}
-            className="pb-12"
-          >
-            {testimonials.slice(0, 4).map((testimonial, index) => (
-              <SwiperSlide key={index}>
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5 }}
-                  viewport={{ once: true }}
-                  whileHover={{ y: -5 }}
-                  className="bg-background p-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 h-full"
-                >
-                  <FaQuoteLeft className="text-gray-300 text-2xl mb-4" />
-                  <p className="text-gray-600 italic mb-6">{testimonial.quote}</p>
-                  <h3 className="font-bold text-primary">{testimonial.name}</h3>
-                  <p className="text-sm text-secondaryText">{testimonial.position}</p>
-                </motion.div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-          <div className="testimonial-pagination flex justify-center mt-8 gap-2"></div>
-        </div>
+        {/* Swiper Carousel */}
+        <Swiper
+          slidesPerView={1}
+          spaceBetween={30}
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true
+          }}
+          pagination={{
+            clickable: true,
+            el: '.testimonial-pagination',
+          }}
+          breakpoints={{
+            640: { slidesPerView: 2, spaceBetween: 30 },
+            1024: { slidesPerView: 3, spaceBetween: 40 },
+          }}
+          modules={[Pagination, Autoplay]}
+          className="pb-12"
+        >
+          {testimonials.map((testimonial, index) => (
+            <SwiperSlide key={index}>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -5 }}
+                className="bg-background p-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 h-full"
+              >
+                <FaQuoteLeft className="text-gray-300 text-2xl mb-4" />
+                <p className="text-gray-600 italic mb-6">{testimonial.quote}</p>
+                <h3 className="font-bold text-primary">{testimonial.name}</h3>
+                <p className="text-sm text-secondaryText">{testimonial.position}</p>
+              </motion.div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
 
-        {/* Button */}
+        <div className="testimonial-pagination flex justify-center mt-8 gap-2"></div>
+
+        {/* Add Experience Button */}
         <div className="flex justify-center mt-8">
           <button
             onClick={() => setShowModal(true)}

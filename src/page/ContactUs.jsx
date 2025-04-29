@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import Swal from 'sweetalert2'; // ✅ Important!
+import Swal from 'sweetalert2'; 
 
 const ContactUs = () => {
   const [successMessage, setSuccessMessage] = useState('');
@@ -9,7 +9,7 @@ const ContactUs = () => {
     event.preventDefault();
     const formData = new FormData(event.target);
 
-    formData.append("access_key", "00a22c40-b7c7-4daf-9e9f-dbc47dc0d9e0");
+    formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
 
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
@@ -45,7 +45,7 @@ const ContactUs = () => {
         text: "Something went wrong!",
       });
     }
-  };
+  }
 
   return (
     <section className="pt-28 pb-16 px-6 md:px-16 bg-background min-h-screen">

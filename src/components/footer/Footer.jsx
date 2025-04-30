@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaLinkedin, FaTwitter, FaFacebook, FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from 'react-icons/fa';
+import { FaLinkedin, FaInstagram, FaFacebook, FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from 'react-icons/fa';
 import { Link } from 'react-router-dom'
 import { useNavigate } from "react-router-dom";
 
@@ -33,13 +33,13 @@ const Footer = () => {
               Professional financial services tailored to help your business grow and thrive in today's competitive market.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-secondaryText transition-colors">
+              <a href="#" className="text-secondaryText transition-colors" target='_blank'>
                 <FaLinkedin className="text-xl" />
               </a>
-              <a href="#" className="text-secondaryText  transition-colors">
-                <FaTwitter className="text-xl" />
+              <a href="https://www.instagram.com/elite_partners" target="_blank" className="text-secondaryText  transition-colors">
+                <FaInstagram className="text-xl" />
               </a>
-              <a href="#" className="text-secondaryText  transition-colors">
+              <a href="#" className="text-secondaryText  transition-colors" target='_blank' >
                 <FaFacebook className="text-xl" />
               </a>
             </div>
@@ -77,7 +77,6 @@ const Footer = () => {
               <li><Link to="/planning" className="text-secondaryText  transition-colors">Financial Planning</Link></li>
               <li><Link to="/riskAdvisory" className="text-secondaryText  transition-colors">Risk Advisory</Link></li>
               <li><Link to="/consult" className="text-secondaryText  transition-colors">Strategic Consulting</Link></li>
-              {/* <li><Link to="#" className="text-secondaryText  transition-colors">Tax Compliance</Link></li> */}
             </ul>
           </motion.div>
 
@@ -119,7 +118,7 @@ const Footer = () => {
             viewport={{ once: true }}
             className="text-secondaryText text-sm mb-4 md:mb-0"
           >
-            © {new Date().getFullYear()} Financial Solutions Inc. All rights reserved.
+            ©{new Date().getFullYear()} Financial Solutions Inc. All rights reserved.
           </motion.p>
           <motion.div
             initial={{ opacity: 0 }}

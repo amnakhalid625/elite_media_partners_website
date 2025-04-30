@@ -32,7 +32,7 @@ const Accounting = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl font-bold text-gray-800 mb-6">
+              <h2 className="text-3xl font-bold text-secondaryText mb-6">
                 Full-Cycle Accounting Aligned with IFRS & GAAP
               </h2>
               <p className="text-gray-600 mb-6 text-lg leading-relaxed">
@@ -125,7 +125,7 @@ const Accounting = () => {
                   <div className="mr-4">
                     {feature.icon}
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-800">{feature.title}</h3>
+                  <h3 className="text-xl font-semibold text-secondaryText">{feature.title}</h3>
                 </div>
                 <p className="text-gray-600">{feature.description}</p>
               </motion.div>

@@ -11,7 +11,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/autoplay';
 import 'swiper/css/effect-fade';
 import Services from '../../components/services/Serivces';
-import ContentCard from '../../components/contentCard/ContentCard';
+// import ContentCard from '../../components/contentCard/ContentCard';
 import TeamMembers from '../../components/team/TeamMembers';
 import Testimonial from '../../components/testimonial/Testimonial';
 import Footer from '../../components/footer/Footer';
@@ -130,7 +130,7 @@ const Home = () => {
       </div>
 
       <Services />
-      <ContentCard />
+      {/* <ContentCard /> */}
       <TeamMembers />
       <Testimonial />
       <Footer />

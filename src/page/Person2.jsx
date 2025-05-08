@@ -41,5 +41,4 @@ const Person2 = () => {
     </section>
   );
 };
-
 export default Person2;

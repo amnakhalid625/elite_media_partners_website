@@ -10,7 +10,6 @@ const Person1 = () => {
         <p className="text-sm text-gray-500 mb-6 italic">
           Fellow Member – Institute of Chartered Accountants of Pakistan
         </p>
-
         <div className="space-y-4 text-gray-700 leading-relaxed text-justify">
           <p>
             Aamer Waqar Chaudhry is a Bhimji Gold Medalist and law graduate with over 30 years of leadership in finance,

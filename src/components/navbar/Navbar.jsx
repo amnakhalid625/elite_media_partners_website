@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import logoImg from '../../assets/images/finalLogo.png';
 import { Link } from 'react-router-dom';
-import CompanyProfile from '../../pdf/puzzles.pdf';
+// import CompanyProfile from '../../pdf/puzzles.pdf';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -54,7 +54,7 @@ const Navbar = () => {
             <a href="#services" className="text-gray-700 hover:border-b-4 hover:border-primary transition-all duration-300 hover:scale-105">Services</a>
             <Link to="/contact" className="text-gray-700 hover:border-b-4 hover:border-primary transition-all duration-300 hover:scale-105">Contact Us</Link>
             
-            <a href={CompanyProfile} download="CompanyProfile.pdf">
+            <a href='https://www.linkedin.com/company/elitepartnerglobal/' target='_blank' >
               <button 
                 type="button" 
                 className="inline-flex items-center px-4 py-3 border border-transparent rounded-md shadow-sm text-sm font-bold text-white bg-primary hover:bg-secondary transition-all duration-300 hover:scale-105 transform"
@@ -104,10 +104,11 @@ const Navbar = () => {
             
             <div className="px-3 py-2">
               <a 
-                href={CompanyProfile} 
-                download="CompanyProfile.pdf"
+                href='https://www.linkedin.com/company/elitepartnerglobal/'
+                target='_blank' 
                 onClick={() => setIsOpen(false)}
               >
+                
                 <button 
                   type="button" 
                   className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary hover:bg-secondary transition-colors duration-200"

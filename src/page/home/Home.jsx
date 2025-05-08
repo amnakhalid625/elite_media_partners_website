@@ -22,6 +22,8 @@ const slides = [
     bg:one,
     title: "Transforming Financial Strategy",
     desc: "Elite Partners redefines how businesses manage finance with a commitment to precision, transparency, and strategic growth.",
+  
+  
   },
   {
     bg: two,
@@ -92,7 +94,8 @@ const Home = () => {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     transition={{ type: "spring", stiffness: 200 }}
-                    href="#"
+                    href="https://www.linkedin.com/company/elitepartnerglobal/"
+                    target="_blank"
                     className="bg-primary hover:bg-secondary text-white font-bold py-3 px-8 rounded-md shadow-md transition duration-300"
                   >
                     Learn More

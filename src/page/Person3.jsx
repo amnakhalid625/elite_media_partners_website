@@ -35,5 +35,4 @@ const Person3 = () => {
     </section>
   );
 };
-
 export default Person3;

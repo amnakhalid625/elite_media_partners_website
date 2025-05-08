@@ -36,7 +36,7 @@ const Footer = () => {
               <a href="#" className="text-secondaryText transition-colors" target='_blank'>
                 <FaLinkedin className="text-xl" />
               </a>
-              <a href="https://www.instagram.com/elite_partners" target="_blank" className="text-secondaryText  transition-colors">
+              <a href="https://www.instagram.com/elite__partners/?utm_source=qr&igsh=ZmI3d3U0bW82Nmpq#" target="_blank" className="text-secondaryText  transition-colors">
                 <FaInstagram className="text-xl" />
               </a>
               <a href="#" className="text-secondaryText  transition-colors" target='_blank' >

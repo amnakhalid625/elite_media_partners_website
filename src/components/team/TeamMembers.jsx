@@ -27,6 +27,18 @@ const TeamMembers = () => {
       link: "/team/aamer-waqar"
     },
     {
+      name:'Ali Aslam Awan',
+      position: "Global CFO",
+      image: firstImg,
+      link: "/team/aamer-waqar"
+    },
+    {
+      name: "Aliza Ishfaq",
+      position: "Partner - Assurance & Compliance",
+      image: secondImg,
+      link: "/team/aliza-ishfaq"
+    },
+    {
       name: "Aliza Ishfaq",
       position: "Partner - Assurance & Compliance",
       image: secondImg,

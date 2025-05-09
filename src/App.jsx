@@ -13,6 +13,9 @@ import Person1 from "./page/Person1";
 import Person2 from "./page/Person2";
 import Person3 from "./page/Person3";
 import Person4 from "./page/Person4";
+import Person5 from "./page/Person5";
+import Person6 from "./page/Person6";
+
 
 
 
@@ -35,6 +38,9 @@ function App() {
           <Route path ='/team/aliza-ishfaq' element={<Person2 />} />
           <Route path ='/team/mehak-irfan' element={<Person3 />} />
           <Route path ='/team/ayesha-qasim' element={<Person4 />} />
+          <Route path ='/team/ayesha-qasim' element={<Person5 />} />
+          <Route path ='/team/ayesha-qasim' element={<Person6 />} />
+
 
 
         </Routes>

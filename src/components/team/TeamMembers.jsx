@@ -8,8 +8,6 @@ import fourthImg from '../../assets/images/team4.png';
 import fiveImg from '../../assets/images/team5.png';
 import sixImg from '../../assets/images/team6.png';
 
-
-
 const lineVariants2 = {
   hidden: { width: 0 },
   visible: { width: "80px" },
@@ -30,18 +28,17 @@ const TeamMembers = () => {
     },
     {
       name:'Ali Aslam Awan',
-      position: "Global CFO",
+      position: "Legal Advisor",
       image: fiveImg,
       link: "/team/ayesha-ali"
     },
-    
     {
       name: "Hassan Masood",
-      position: "Partner - Assurance & Compliance",
+      position: "Finance & Audit Professional",
       image: sixImg,
       link: "/team/hassan-masood"
     },
-     {
+    {
       name: "Mehak Irfan",
       position: "Partner - Consulting",
       image: thirdImg,
@@ -53,7 +50,6 @@ const TeamMembers = () => {
       image: secondImg,
       link: "/team/aliza-ishfaq"
     },
-   
     {
       name: "Ayesha Qasim",
       position: "Partner - Fixed Asset Management",
@@ -62,50 +58,64 @@ const TeamMembers = () => {
     }
   ];
 
-
   return (
-    <section className="py-16 bg-background">
+    <section className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header Section */}
+        <motion.div 
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ staggerChildren: 0.2 }}
+          className="mb-16 text-center"
+        >
+          <motion.div 
+            variants={lineVariants2}
+            className="mx-auto w-20 h-1 bg-primary mb-4"
+          />
+          <motion.h2 
+            variants={titleVariants}
+            className="text-4xl font-bold text-secondary mb-3"
+          >
+            Our Team
+          </motion.h2>
+          <motion.p 
+            variants={titleVariants}
+            className="text-lg text-secondaryText max-w-2xl mx-auto"
+          >
+            We are a team of dedicated professionals who are passionate about what we do.
+          </motion.p>
+        </motion.div>
 
-        <div className="mb-8">
-          <div className="flex items-center justify-center gap-2">
-            <div className="w-8 h-0.5 bg-primary"></div>
-            <h2 className="text-3xl font-bold text-secondary">Our Team</h2>
-            <div className="w-8 h-0.5 bg-primary"></div>
-          </div>
-          <p className="text-secondaryText text-center mt-2">We are a team of dedicated professionals who are passionate about what we do.</p>
-        </div>
-
-
-        {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {team.map((member, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.15 }}
-              viewport={{ once: true }}
-              whileHover={{ scale: 1.03 }}
-              className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true, margin: "-50px" }}
+              whileHover={{ y: -10 }}
+              className="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
             >
-              <div className="h-64 overflow-hidden">
+              <div className="h-72 overflow-hidden relative">
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
               <div className="p-6 text-center">
-                <h3 className="text-xl font-semibold text-secondaryText mb-2">{member.name}</h3>
-                <p className="text-gray-600 mb-4">{member.position}</p>
+                <h3 className="text-xl font-bold text-gray-800 mb-1">{member.name}</h3>
+                <p className="text-gray-600 mb-5">{member.position}</p>
                 <Link to={member.link}>
-                  <button className="flex items-center justify-center mx-auto text-primary font-semibold hover:text-primary-dark transition-colors">
+                  <button className="inline-flex items-center text-primary font-medium hover:text-primary-dark transition-colors group-hover:underline">
                     View Profile
-                    <FiArrowRight className="ml-2" />
+                    <FiArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
                   </button>
                 </Link>
-
               </div>
             </motion.div>
           ))}

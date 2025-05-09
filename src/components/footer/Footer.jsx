@@ -39,7 +39,7 @@ const Footer = () => {
               <a href="https://www.instagram.com/elite__partners/?utm_source=qr&igsh=ZmI3d3U0bW82Nmpq#" target="_blank" className="text-secondaryText  transition-colors">
                 <FaInstagram className="text-xl" />
               </a>
-              <a href="#" className="text-secondaryText  transition-colors" target='_blank' >
+              <a href="https://www.facebook.com/share/1EiqA1NZFW/" className="text-secondaryText  transition-colors" target='_blank' >
                 <FaFacebook className="text-xl" />
               </a>
             </div>

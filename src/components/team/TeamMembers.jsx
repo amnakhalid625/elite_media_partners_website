@@ -16,7 +16,7 @@ const TeamMembers = () => {
   const team = [
     {
       name: "Aamer Waqar Chaudhry",
-      position: "Global CEO",
+      position: "Co-Founder",
       image: firstImg,
       link: "/team/aamer-waqar"
     },
@@ -40,13 +40,13 @@ const TeamMembers = () => {
     },
     {
       name: "Aliza Ishfaq",
-      position: "Partner - Assurance & Compliance",
+      position: "Business and growth lead",
       image: secondImg,
       link: "/team/aliza-ishfaq"
     },
     {
       name: "Ayesha Qasim",
-      position: "Partner - Fixed Asset Management",
+      position: "Accounts and Finance Lead",
       image: fourthImg,
       link: "/team/ayesha-qasim"
     }

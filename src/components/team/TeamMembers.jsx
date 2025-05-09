@@ -28,7 +28,7 @@ const TeamMembers = () => {
     },
     {
       name: "Hassan Masood",
-      position: "Finance & Audit Professional",
+      position: "Director Business and financial advisory",
       image: sixImg,
       link: "/team/hassan-masood"
     },

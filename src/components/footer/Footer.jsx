@@ -33,7 +33,7 @@ const Footer = () => {
               Professional financial services tailored to help your business grow and thrive in today's competitive market.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-secondaryText transition-colors" target='_blank'>
+              <a href="https://www.linkedin.com/company/elitepartnerglobal/" className="text-secondaryText transition-colors" target='_blank'>
                 <FaLinkedin className="text-xl" />
               </a>
               <a href="https://www.instagram.com/elite__partners/?utm_source=qr&igsh=ZmI3d3U0bW82Nmpq#" target="_blank" className="text-secondaryText  transition-colors">
@@ -98,10 +98,10 @@ const Footer = () => {
                 <FaEnvelope className="text-secondaryText mr-3" />
                 <a href="mailto:info@financialsolutions.com" className="text-secondaryText hover:text-secondaryText transition-colors">elitepartners00@gmail.com</a>
               </li>
-              <li className="flex items-center">
+              {/* <li className="flex items-center">
                 <FaClock className="text-secondaryText mr-3" />
                 <span className="text-secondaryText">Mon-Fri: 9AM - 6PM</span>
-              </li>
+              </li> */}
             </ul>
           </motion.div>
         </div>

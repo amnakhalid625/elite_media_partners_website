@@ -38,8 +38,8 @@ function App() {
           <Route path ='/team/aliza-ishfaq' element={<Person2 />} />
           <Route path ='/team/mehak-irfan' element={<Person3 />} />
           <Route path ='/team/ayesha-qasim' element={<Person4 />} />
-          <Route path ='/team/ayesha-qasim' element={<Person5 />} />
-          <Route path ='/team/ayesha-qasim' element={<Person6 />} />
+          <Route path ='/team/ayesha-ali' element={<Person5 />} />
+          <Route path ='/team/hassan-masood' element={<Person6 />} />
 
 
 

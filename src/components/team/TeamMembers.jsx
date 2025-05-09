@@ -1,22 +1,16 @@
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FiArrowRight } from 'react-icons/fi';
+import { FiArrowRight, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Navigation } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
 import firstImg from '../../assets/images/team1.png';
 import secondImg from '../../assets/images/team2.png';
 import thirdImg from '../../assets/images/team3.png';
 import fourthImg from '../../assets/images/team4.png';
 import fiveImg from '../../assets/images/team5.png';
 import sixImg from '../../assets/images/team6.png';
-
-const lineVariants2 = {
-  hidden: { width: 0 },
-  visible: { width: "80px" },
-};
-
-const titleVariants = {
-  hidden: { opacity: 0, y: -20 },
-  visible: { opacity: 1, y: 0 },
-};
 
 const TeamMembers = () => {
   const team = [
@@ -27,10 +21,10 @@ const TeamMembers = () => {
       link: "/team/aamer-waqar"
     },
     {
-      name:'Ali Aslam Awan',
+      name: 'Ali Aslam Awan',
       position: "Legal Advisor",
       image: fiveImg,
-      link: "/team/ayesha-ali"
+      link: "/team/ali-aslam"
     },
     {
       name: "Hassan Masood",
@@ -59,66 +53,90 @@ const TeamMembers = () => {
   ];
 
   return (
-    <section className="py-20 bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-20 bg-background relative">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
         {/* Header Section */}
         <motion.div 
-          initial="hidden"
-          whileInView="visible"
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
-          transition={{ staggerChildren: 0.2 }}
           className="mb-16 text-center"
         >
-          <motion.div 
-            variants={lineVariants2}
-            className="mx-auto w-20 h-1 bg-primary mb-4"
-          />
-          <motion.h2 
-            variants={titleVariants}
-            className="text-4xl font-bold text-secondary mb-3"
-          >
-            Our Team
-          </motion.h2>
-          <motion.p 
-            variants={titleVariants}
-            className="text-lg text-secondaryText max-w-2xl mx-auto"
-          >
+          <div className="flex items-center justify-center gap-4 mb-6">
+            <div className="w-12 h-0.5 bg-primary" />
+            <h2 className="text-4xl font-bold text-secondary">Our Team</h2>
+            <div className="w-12 h-0.5 bg-primary" />
+          </div>
+          <p className="text-lg text-secondaryText max-w-2xl mx-auto">
             We are a team of dedicated professionals who are passionate about what we do.
-          </motion.p>
+          </p>
         </motion.div>
 
-        {/* Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {team.map((member, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true, margin: "-50px" }}
-              whileHover={{ y: -10 }}
-              className="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
-            >
-              <div className="h-72 overflow-hidden relative">
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </div>
-              <div className="p-6 text-center">
-                <h3 className="text-xl font-bold text-gray-800 mb-1">{member.name}</h3>
-                <p className="text-gray-600 mb-5">{member.position}</p>
-                <Link to={member.link}>
-                  <button className="inline-flex items-center text-primary font-medium hover:text-primary-dark transition-colors group-hover:underline">
-                    View Profile
-                    <FiArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
-                  </button>
-                </Link>
-              </div>
-            </motion.div>
-          ))}
+        {/* Swiper Carousel */}
+        <div className="relative px-12">
+          {/* Navigation Buttons */}
+          <button className="team-swiper-button-prev absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white p-3 rounded-full shadow-lg hover:bg-primary hover:text-white transition-all duration-500 ease-in-out transform hover:scale-110 -ml-4">
+            <FiChevronLeft className="w-6 h-6" />
+          </button>
+          
+          <button className="team-swiper-button-next absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white p-3 rounded-full shadow-lg hover:bg-primary hover:text-white transition-all duration-500 ease-in-out transform hover:scale-110 -mr-4">
+            <FiChevronRight className="w-6 h-6" />
+          </button>
+
+          <Swiper
+            modules={[Autoplay, Navigation]}
+            spaceBetween={30}
+            slidesPerView={1}
+            breakpoints={{
+              640: { slidesPerView: 2, spaceBetween: 20 },
+              1024: { slidesPerView: 3, spaceBetween: 30 },
+              1280: { slidesPerView: 3, spaceBetween: 40 },
+            }}
+            autoplay={{
+              delay: 5000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true
+            }}
+            navigation={{
+              nextEl: '.team-swiper-button-next',
+              prevEl: '.team-swiper-button-prev',
+            }}
+            loop={true}
+            className="py-8"
+          >
+            {team.map((member, index) => (
+              <SwiperSlide key={index} className="px-3">
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.15, ease: "easeOut" }}
+                  viewport={{ once: true }}
+                  whileHover={{ scale: 1.03, transition: { duration: 0.4, ease: "easeOut" } }}
+                  className="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 ease-in-out h-full max-w-md mx-auto border border-gray-100"
+                >
+                  <div className="h-72 overflow-hidden relative">
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="w-full h-full object-cover transition-transform duration-700 ease-in-out hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-500 ease-in-out" />
+                  </div>
+                  <div className="p-8 text-center">
+                    <h3 className="text-2xl font-bold text-gray-800 mb-3">{member.name}</h3>
+                    <p className="text-gray-600 mb-6 text-base">{member.position}</p>
+                    <Link to={member.link}>
+                      <button className="inline-flex items-center text-primary font-semibold hover:text-primary-dark transition-colors duration-300 group px-6 py-2 border border-primary rounded-lg hover:bg-primary hover:text-white">
+                        View Profile
+                        <FiArrowRight className="ml-2 transition-transform duration-300 group-hover:translate-x-2" />
+                      </button>
+                    </Link>
+                  </div>
+                </motion.div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </div>
     </section>

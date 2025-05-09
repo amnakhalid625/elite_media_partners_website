@@ -30,7 +30,7 @@ const Person6 = () => {
 
         <div className="mt-8">
           <a
-            href="https://www.linkedin.com/in/" // Replace with actual LinkedIn profile if available
+            href="https://www.linkedin.com/in/hassan-masood-117a2071" 
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center px-5 py-3 bg-primary text-white rounded-full shadow-md hover:bg-primary-dark transition duration-300"

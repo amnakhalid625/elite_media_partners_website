@@ -5,6 +5,9 @@ import firstImg from '../../assets/images/team1.png';
 import secondImg from '../../assets/images/team2.png';
 import thirdImg from '../../assets/images/team3.png';
 import fourthImg from '../../assets/images/team4.png';
+import fiveImg from '../../assets/images/team5.png';
+import sixImg from '../../assets/images/team6.png';
+
 
 
 const lineVariants2 = {
@@ -28,27 +31,29 @@ const TeamMembers = () => {
     {
       name:'Ali Aslam Awan',
       position: "Global CFO",
-      image: firstImg,
+      image: fiveImg,
       link: "/team/aamer-waqar"
     },
+    
     {
-      name: "Aliza Ishfaq",
+      name: "Hassan Masood",
       position: "Partner - Assurance & Compliance",
-      image: secondImg,
+      image: sixImg,
       link: "/team/aliza-ishfaq"
     },
-    {
-      name: "Aliza Ishfaq",
-      position: "Partner - Assurance & Compliance",
-      image: secondImg,
-      link: "/team/aliza-ishfaq"
-    },
-    {
+     {
       name: "Mehak Irfan",
       position: "Partner - Consulting",
       image: thirdImg,
       link: "/team/mehak-irfan"
     },
+    {
+      name: "Aliza Ishfaq",
+      position: "Partner - Assurance & Compliance",
+      image: secondImg,
+      link: "/team/aliza-ishfaq"
+    },
+   
     {
       name: "Ayesha Qasim",
       position: "Partner - Fixed Asset Management",

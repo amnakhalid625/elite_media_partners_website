@@ -32,14 +32,14 @@ const TeamMembers = () => {
       name:'Ali Aslam Awan',
       position: "Global CFO",
       image: fiveImg,
-      link: "/team/aamer-waqar"
+      link: "/team/ayesha-ali"
     },
     
     {
       name: "Hassan Masood",
       position: "Partner - Assurance & Compliance",
       image: sixImg,
-      link: "/team/aliza-ishfaq"
+      link: "/team/hassan-masood"
     },
      {
       name: "Mehak Irfan",

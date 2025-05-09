@@ -15,6 +15,7 @@ import Person3 from "./page/Person3";
 import Person4 from "./page/Person4";
 import Person5 from "./page/Person5";
 import Person6 from "./page/Person6";
+import Error from "./page/Error";
 
 
 
@@ -40,6 +41,8 @@ function App() {
           <Route path ='/team/ayesha-qasim' element={<Person4 />} />
           <Route path ='/team/ali-aslam' element={<Person5 />} />
           <Route path ='/team/hassan-masood' element={<Person6 />} />
+          <Route path="*" element={<Error />} />
+
 
 
 

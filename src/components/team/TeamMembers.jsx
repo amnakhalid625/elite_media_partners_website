@@ -34,7 +34,7 @@ const TeamMembers = () => {
     },
     {
       name: "Mehak Irfan",
-      position: "Cyber Security Expert",
+      position: "CTO",
       image: thirdImg,
       link: "/team/mehak-irfan"
     },

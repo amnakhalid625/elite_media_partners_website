@@ -7,7 +7,7 @@ const Person7 = () => {
     
      <section className="pt-28 pb-16 px-4 bg-gradient-to-br from-[#f7f8fc] to-[#e8ecf4] min-h-screen">
           <div className="max-w-4xl mx-auto bg-white p-8 shadow-2xl rounded-3xl border border-gray-200">
-            <h1 className="text-4xl font-bold text-primary mb-2">Hassan Masood</h1>
+            <h1 className="text-4xl font-bold text-primary mb-2">Abdul Khabir</h1>
             <p className="text-lg font-medium text-gray-700 mb-1">Finance & Audit Professional</p>
             <p className="text-sm text-gray-500 mb-6 italic">10+ Years of Financial Expertise</p>
     
@@ -32,7 +32,7 @@ const Person7 = () => {
     
             <div className="mt-8">
               <a
-                href="https://www.linkedin.com/in/hassan-masood-117a2071" 
+                href="https://www.linkedin.com/in/abdul-khabir-9a113965/" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-5 py-3 bg-primary text-white rounded-full shadow-md hover:bg-primary-dark transition duration-300"

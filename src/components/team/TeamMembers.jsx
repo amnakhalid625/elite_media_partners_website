@@ -22,7 +22,7 @@ const TeamMembers = () => {
     },
     {
       name: 'Ali Aslam Awan',
-      position: "Legal Advisor",
+      position: "Head of Legal and Compliance",
       image: fiveImg,
       link: "/team/ali-aslam"
     },
@@ -34,7 +34,7 @@ const TeamMembers = () => {
     },
     {
       name: "Mehak Irfan",
-      position: "CTO",
+      position: "Chief Technical Officer",
       image: thirdImg,
       link: "/team/mehak-irfan"
     },

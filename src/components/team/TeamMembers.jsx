@@ -11,6 +11,8 @@ import thirdImg from '../../assets/images/team3.png';
 import fourthImg from '../../assets/images/team4.png';
 import fiveImg from '../../assets/images/team5.png';
 import sixImg from '../../assets/images/team6.png';
+import seventhImg from '../../assets/images/team7.png'; 
+import { link } from 'framer-motion/client';
 
 const TeamMembers = () => {
   const team = [
@@ -49,6 +51,12 @@ const TeamMembers = () => {
       position: "Accounts and Finance Lead",
       image: fourthImg,
       link: "/team/ayesha-qasim"
+    },
+    {
+      name:"Abdul Khabir",
+      position: "No",
+      image:seventhImg,
+      link  :"/team/abdul-khabir"
     }
   ];
 
